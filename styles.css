@@ -11,6 +11,12 @@
   --radius:16px;
   --radius2:12px;
   --max:1120px;
+
+  /* Dark section base */
+  --navy:#071427; /* deep navy */
+  --navyText:#eef4ff;
+  --navyMuted:rgba(238,244,255,.78);
+  --navyBorder:rgba(255,255,255,.14);
 }
 
 *{box-sizing:border-box}
@@ -158,6 +164,18 @@ a:hover{opacity:.92}
 }
 .muted{color:var(--muted);margin:0}
 
+/* Dark alternating sections (Nerdery-style) */
+.section--dark{
+  background:
+    radial-gradient(900px 420px at 15% 20%, rgba(31,111,235,.22), transparent 60%),
+    radial-gradient(700px 360px at 85% 20%, rgba(11,91,211,.18), transparent 62%),
+    var(--navy);
+  color: var(--navyText);
+}
+.section--dark .muted{ color: var(--navyMuted); }
+.section--dark h2,
+.section--dark h3{ color:#f3f7ff; }
+
 /* Grids */
 .grid{
   display:grid;
@@ -166,7 +184,7 @@ a:hover{opacity:.92}
 .grid--3{grid-template-columns:repeat(3, 1fr)}
 .grid--4{grid-template-columns:repeat(4, 1fr)}
 
-/* PANELS — clean interior + blue gradient outline */
+/* PANELS — clean interior + blue gradient outline (light sections) */
 .panel{
   background:
     linear-gradient(#ffffff, #ffffff) padding-box,
@@ -192,11 +210,25 @@ a:hover{opacity:.92}
 
 .panel--tight{padding:16px}
 
+/* Panels on dark: glassy navy with blue gradient outline */
+.section--dark .panel{
+  background:
+    linear-gradient(rgba(255,255,255,.06), rgba(255,255,255,.04)) padding-box,
+    linear-gradient(135deg, rgba(31,111,235,.55), rgba(31,111,235,.22), rgba(11,91,211,.48)) border-box;
+  border:1px solid transparent;
+  box-shadow: 0 18px 48px rgba(0,0,0,.35);
+}
+.section--dark .panel p{ color: var(--navyMuted); }
+.section--dark .panel__kicker{ color: rgba(155,203,255,.95); }
+
 /* Subtle hover lift (desktop-ish only) */
 @media (hover:hover){
   .panel:hover{
     transform: translateY(-2px);
     box-shadow:0 14px 34px rgba(11,18,32,.08);
+  }
+  .section--dark .panel:hover{
+    box-shadow: 0 22px 58px rgba(0,0,0,.45);
   }
 }
 
@@ -240,6 +272,13 @@ a:hover{opacity:.92}
   border:1px solid rgba(31,111,235,.18);
 }
 
+/* Days on dark */
+.section--dark .day{
+  background: rgba(255,255,255,.06);
+  color: var(--navyText);
+  border-color: rgba(255,255,255,.14);
+}
+
 .panel--aside .bullets{
   margin:10px 0 0;
   padding-left:18px;
@@ -247,8 +286,14 @@ a:hover{opacity:.92}
   font-size:14px;
 }
 .panel--aside .bullets li{margin:8px 0}
+
+.section--dark .panel--aside .bullets{
+  color: var(--navyMuted);
+}
+
 .mini{margin-top:14px;padding-top:14px;border-top:1px solid var(--border)}
 .mini__title{font-weight:700;margin-bottom:6px}
+.section--dark .mini{border-top-color: rgba(255,255,255,.12);}
 
 /* CTA block */
 .cta{
@@ -317,6 +362,16 @@ input[type="email"]:focus{
 .btn--secondary:hover{background:rgba(31,111,235,.04)}
 .btn--full{width:100%}
 
+/* Secondary buttons on dark */
+.section--dark .btn--secondary{
+  background: rgba(255,255,255,.06);
+  color: var(--navyText);
+  border-color: rgba(255,255,255,.16);
+}
+.section--dark .btn--secondary:hover{
+  background: rgba(255,255,255,.10);
+}
+
 .textlink{
   color:var(--blue);
   font-weight:600;
@@ -355,7 +410,6 @@ input[type="email"]:focus{
   transition: opacity .6s ease, transform .6s ease;
   will-change: opacity, transform;
 }
-
 .reveal.in-view{
   opacity:1;
   transform: translateY(0);
