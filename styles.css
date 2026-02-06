@@ -163,13 +163,18 @@ a:hover{opacity:.9}
 .grid--3{grid-template-columns:repeat(3, 1fr)}
 .grid--4{grid-template-columns:repeat(4, 1fr)}
 
-.panel{
-    background:var(--panel);
-    border:1px solid var(--border);
-    border-radius:var(--radius);
-    padding:18px;
-    box-shadow:0 1px 0 rgba(11,18,32,.02);
+/* Glassy light-blue panels (subtle, modern) */
+.panel--glassy{
+  background:
+    linear-gradient(135deg, rgba(31,111,235,.10), rgba(31,111,235,.03) 55%, rgba(255,255,255,.85));
+  border:1px solid rgba(31,111,235,.18);
+  box-shadow: 0 10px 26px rgba(11,18,32,.06);
 }
+
+.panel--glassy .panel__kicker{
+  color: var(--blue2);
+}
+
 .panel h3{
     margin:6px 0 8px;
     font-size:16px;
@@ -350,3 +355,4 @@ input[type="email"]:focus{
     font-size:13px;
   }
 }
+
