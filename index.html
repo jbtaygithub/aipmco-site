@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <meta name="description" content="AIPMCO helps PMOs and delivery leaders modernize workflows and implement practical, tool-agnostic AI patterns that stick." />
   <title>AIPMCO — AI Powered Projects</title>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -12,7 +13,7 @@
 </head>
 
 <body>
-  <!-- Top announcement (optional) -->
+  <!-- Top announcement -->
   <div class="topbar">
     <div class="container topbar__inner">
       <span class="topbar__text">Systems-first • Tool-agnostic • PMI-aligned</span>
@@ -24,9 +25,11 @@
   <header class="header">
     <div class="container header__inner">
       <a class="brand" href="#top" aria-label="AIPMCO Home">
-        <!-- Replace with your actual logo file in /assets if desired -->
-        <img class="brand__logo" src="./assets/logo.png" alt="AIPMCO logo" onerror="this.style.display='none';document.querySelector('.brand__mark').style.display='grid';" />
+        <!-- If assets/logo.png exists, it will display. Otherwise fallback mark shows. -->
+        <img class="brand__logo" src="./assets/logo.png" alt="AIPMCO logo"
+             onerror="this.style.display='none';document.querySelector('.brand__mark').style.display='grid';" />
         <div class="brand__mark" style="display:none;">AI</div>
+
         <div class="brand__text">
           <div class="brand__name">AIPMCO</div>
           <div class="brand__tag">AI Powered Projects</div>
@@ -39,7 +42,6 @@
         <a href="#scorecard">Scorecard</a>
         <a href="#contact">Contact</a>
       </nav>
-  
     </div>
   </header>
 
@@ -103,12 +105,14 @@
             <h3>AI layered on top of broken workflows</h3>
             <p>Without workflow clarity, AI amplifies inconsistency and rework.</p>
           </div>
-        <div class="panel">
+
+          <div class="panel">
             <div class="panel__kicker">02</div>
             <h3>Decision latency + unclear ownership</h3>
             <p>If inputs and decision rights aren’t explicit, delivery slows—AI can’t fix that.</p>
           </div>
-  <div class="panel">
+
+          <div class="panel">
             <div class="panel__kicker">03</div>
             <h3>PMs drowning in status while delivery slips anyway</h3>
             <p>Tooling helps document the drift. Systems thinking prevents it.</p>
@@ -125,19 +129,23 @@
           <p class="muted">A practical, structured path from assessment to measurable improvement.</p>
         </div>
 
-        <div class="panel panel--tight">
+        <!-- IMPORTANT: 4-up grid -->
+        <div class="grid grid--4">
           <div class="panel panel--tight">
             <h3>Understand</h3>
             <p>Map workflows, constraints, and decision rights. Identify bottlenecks and failure modes.</p>
           </div>
+
           <div class="panel panel--tight">
             <h3>Identify</h3>
             <p>Build a prioritized AI opportunity backlog (impact/effort/risk) tied to real outcomes.</p>
           </div>
+
           <div class="panel panel--tight">
             <h3>Implement</h3>
             <p>Pilot guarded workflows with templates, prompts, and verification—then iterate.</p>
           </div>
+
           <div class="panel panel--tight">
             <h3>Improve</h3>
             <p>Measure results, tune patterns, and scale with governance and enablement.</p>
@@ -158,13 +166,13 @@
           <div class="panel panel--service">
             <h3>3-Day AI-Powered Delivery Workshop</h3>
             <p>
-              A practical, hands-on workshop that provides a clear foundation for AI adoption.
-              Grounded in systems thinking, workflow clarity, and a structured method for selecting and implementing an AI pilot.
+              A practical, hands-on workshop that provides a clear foundation for AI adoption—grounded in systems thinking,
+              workflow clarity, and a structured method for selecting and implementing an AI pilot.
             </p>
 
             <div class="days">
               <div class="day"><strong>Day 1:</strong> PM Core + Workflow Mapping</div>
-              <div class="day"><strong>Day 2:</strong> AI Intro + the AI/PM Framework</div>
+              <div class="day"><strong>Day 2:</strong> AI intro + the AI/PM Framework</div>
               <div class="day"><strong>Day 3:</strong> Hands-on Workflow Redesign + AI Pilot Selection</div>
             </div>
 
@@ -187,7 +195,7 @@
             </ul>
 
             <div class="mini">
-              <div class="mini__title">Prefer async?</div>
+              <div class="mini__title">Prefer remote?</div>
               <p class="muted">We can tailor a remote version for distributed teams, or provide enablement materials for internal rollout.</p>
             </div>
           </div>
@@ -206,7 +214,7 @@
             </p>
           </div>
 
-          <!-- Netlify form (works after deployment) -->
+          <!-- Netlify form -->
           <form class="form" name="scorecard" method="POST" data-netlify="true">
             <input type="hidden" name="form-name" value="scorecard" />
             <div class="form__row">
@@ -272,7 +280,3 @@
   </script>
 </body>
 </html>
-
-
-
-
