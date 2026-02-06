@@ -74,7 +74,7 @@
         </div>
 
         <div class="hero__card" aria-label="Quick overview">
-          <div class="card">
+          <div class="card reveal">
             <div class="card__title">Start here</div>
             <div class="card__body">
               <ul class="checklist">
@@ -100,19 +100,19 @@
         </div>
 
         <div class="grid grid--3">
-          <div class="panel">
+          <div class="panel reveal">
             <div class="panel__kicker">01</div>
             <h3>AI layered on top of broken workflows</h3>
             <p>Without workflow clarity, AI amplifies inconsistency and rework.</p>
           </div>
 
-          <div class="panel">
+          <div class="panel reveal">
             <div class="panel__kicker">02</div>
             <h3>Decision latency + unclear ownership</h3>
             <p>If inputs and decision rights aren’t explicit, delivery slows—AI can’t fix that.</p>
           </div>
 
-          <div class="panel">
+          <div class="panel reveal">
             <div class="panel__kicker">03</div>
             <h3>PMs drowning in status while delivery slips anyway</h3>
             <p>Tooling helps document the drift. Systems thinking prevents it.</p>
@@ -129,24 +129,23 @@
           <p class="muted">A practical, structured path from assessment to measurable improvement.</p>
         </div>
 
-        <!-- IMPORTANT: 4-up grid -->
         <div class="grid grid--4">
-          <div class="panel panel--tight">
+          <div class="panel panel--tight reveal">
             <h3>Understand</h3>
             <p>Map workflows, constraints, and decision rights. Identify bottlenecks and failure modes.</p>
           </div>
 
-          <div class="panel panel--tight">
+          <div class="panel panel--tight reveal">
             <h3>Identify</h3>
             <p>Build a prioritized AI opportunity backlog (impact/effort/risk) tied to real outcomes.</p>
           </div>
 
-          <div class="panel panel--tight">
+          <div class="panel panel--tight reveal">
             <h3>Implement</h3>
             <p>Pilot guarded workflows with templates, prompts, and verification—then iterate.</p>
           </div>
 
-          <div class="panel panel--tight">
+          <div class="panel panel--tight reveal">
             <h3>Improve</h3>
             <p>Measure results, tune patterns, and scale with governance and enablement.</p>
           </div>
@@ -163,7 +162,7 @@
         </div>
 
         <div class="split">
-          <div class="panel panel--service">
+          <div class="panel panel--service reveal">
             <h3>3-Day AI-Powered Delivery Workshop</h3>
             <p>
               A practical, hands-on workshop that provides a clear foundation for AI adoption—grounded in systems thinking,
@@ -184,7 +183,7 @@
             </div>
           </div>
 
-          <div class="panel panel--aside">
+          <div class="panel panel--aside reveal">
             <h3>What you’ll walk away with</h3>
             <ul class="bullets">
               <li>Workflow map + bottlenecks + constraints</li>
@@ -206,7 +205,7 @@
     <!-- Scorecard -->
     <section class="section section--tint" id="scorecard">
       <div class="container">
-        <div class="cta">
+        <div class="cta reveal">
           <div class="cta__copy">
             <h2>Get the AI-in-Delivery Readiness Scorecard</h2>
             <p class="muted">
@@ -214,7 +213,6 @@
             </p>
           </div>
 
-          <!-- Netlify form -->
           <form class="form" name="scorecard" method="POST" data-netlify="true">
             <input type="hidden" name="form-name" value="scorecard" />
             <div class="form__row">
@@ -237,19 +235,19 @@
         </div>
 
         <div class="grid grid--3">
-          <div class="panel">
+          <div class="panel reveal">
             <h3>Book a call</h3>
             <p>Use Calendly to grab a time that works.</p>
             <a class="btn btn--primary btn--full" href="https://calendly.com/aipmco" target="_blank" rel="noopener">Book via Calendly</a>
           </div>
 
-          <div class="panel">
+          <div class="panel reveal">
             <h3>Email</h3>
             <p>Tell us what you’re trying to improve and your timeline.</p>
             <a class="btn btn--secondary btn--full" href="mailto:contact@aipmco.com">contact@aipmco.com</a>
           </div>
 
-          <div class="panel">
+          <div class="panel reveal">
             <h3>LinkedIn</h3>
             <p>Follow the page for practical workflows and templates.</p>
             <a class="btn btn--secondary btn--full" href="https://www.linkedin.com/company/ai-powered-projects-consulting-llc" target="_blank" rel="noopener">Visit LinkedIn Page</a>
@@ -277,6 +275,19 @@
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Scroll reveal for selected elements
+    const revealEls = document.querySelectorAll('.reveal');
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in-view');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+
+    revealEls.forEach(el => io.observe(el));
   </script>
 </body>
 </html>
