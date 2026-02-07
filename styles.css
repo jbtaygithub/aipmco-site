@@ -67,6 +67,7 @@ a:hover{opacity:.92}
   align-items:center;
   gap:16px;
   min-width:0;
+  flex: 1 1 auto;   /* NEW: take remaining space */
 }
 
 /* Logo: +30% from prior 53px => ~69px */
@@ -478,4 +479,5 @@ input[type="email"]:focus{
   /* One-line tagline w/ ellipsis if needed */
   .brand__tagline{ max-width: 240px; }
 }
+
 
