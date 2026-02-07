@@ -486,7 +486,7 @@ input[type="email"]:focus{
 /* Mobile: reduce tagline font so it fits on one line */
 @media (max-width: 420px){
   .brand__tagline{
-    font-size:11px;
+    font-size:10px;
     letter-spacing:-0.2px;
     white-space:nowrap;
     overflow:visible;
@@ -512,10 +512,11 @@ input[type="email"]:focus{
 
   /* keep tagline one line, but give it every pixel */
   .brand__tagline{
-    font-size:11px;
+    font-size:10px;
     letter-spacing:-0.1px;
   }
 }
+
 
 
 
