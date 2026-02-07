@@ -113,11 +113,10 @@ a:hover{opacity:.92}
   color:var(--muted);
   line-height:1.2;
 
-  /* force no wrapping */
-  white-space:nowrap;
-  overflow:hidden;
-  text-overflow:ellipsis;
-  max-width: 520px; /* desktop clamp */
+  white-space:nowrap;  /* keep one line */
+  overflow:visible;    /* remove truncation */
+  text-overflow:clip;  /* remove ellipsis */
+  max-width:none;      /* remove clamps */
 }
 
 /* Nav */
@@ -482,6 +481,7 @@ input[type="email"]:focus{
   /* One-line tagline w/ ellipsis if needed */
   .brand__tagline{ max-width: 240px; }
 }
+
 
 
 
