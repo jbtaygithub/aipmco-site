@@ -512,10 +512,11 @@ input[type="email"]:focus{
 
   /* keep tagline one line, but give it every pixel */
   .brand__tagline{
-    font-size:12px;
+    font-size:11px;
     letter-spacing:-0.1px;
   }
 }
+
 
 
 
