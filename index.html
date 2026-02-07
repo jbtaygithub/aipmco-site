@@ -9,29 +9,25 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./styles.css?v=20260207-1" />
 
+  <!-- Cache-bust CSS to prevent flip-flopping -->
+  <link rel="stylesheet" href="./styles.css?v=20260207-2" />
 </head>
 
 <body>
-  <!-- Top announcement -->
-  <div class="topbar">
-   
-  </div>
-
   <!-- Header -->
   <header class="header">
     <div class="container header__inner">
-     <a class="brand" href="#top" aria-label="AI Powered Projects Home">
-  <img class="brand__logo" src="./assets/logo.png" alt="AI Powered Projects logo"
-       onerror="this.style.display='none';document.querySelector('.brand__mark').style.display='grid';" />
-  <div class="brand__mark" style="display:none;">AI</div>
+      <a class="brand" href="#top" aria-label="AI Powered Projects Home">
+        <img class="brand__logo" src="./assets/logo.png" alt="AI Powered Projects logo"
+             onerror="this.style.display='none';document.querySelector('.brand__mark').style.display='grid';" />
+        <div class="brand__mark" style="display:none;">AI</div>
 
-  <div class="brand__stack">
-    <div class="brand__title">AI Powered Projects</div>
-    <div class="brand__tagline">Systems-first • Tool-agnostic • PMI-aligned</div>
-  </div>
-</a>
+        <div class="brand__stack">
+          <div class="brand__title">AI Powered Projects</div>
+          <div class="brand__tagline">Systems-first • Tool-agnostic • PMI-aligned</div>
+        </div>
+      </a>
 
       <nav class="nav" aria-label="Primary">
         <a href="#services">Services</a>
@@ -210,7 +206,7 @@
             </p>
           </div>
 
-          <!-- Note: data-netlify is harmless on Cloudflare, but not processed. We'll switch to Cloudflare Forms/Workers next if desired. -->
+          <!-- Note: data-netlify is harmless on Cloudflare, but not processed -->
           <form class="form" name="scorecard" method="POST" data-netlify="true">
             <input type="hidden" name="form-name" value="scorecard" />
             <div class="form__row">
@@ -274,10 +270,8 @@
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
 
-    // Scroll reveal + stagger (more motion)
+    // Scroll reveal + stagger
     const revealEls = Array.from(document.querySelectorAll('.reveal'));
-
-    // Apply a stagger delay, capped so it stays snappy
     revealEls.forEach((el, i) => {
       el.style.transitionDelay = `${Math.min(i * 80, 480)}ms`;
     });
@@ -295,6 +289,3 @@
   </script>
 </body>
 </html>
-
-
-
