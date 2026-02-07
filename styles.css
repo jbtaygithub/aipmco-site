@@ -482,6 +482,35 @@ input[type="email"]:focus{
   .brand__tagline{ max-width: 240px; }
 }
 
+/* Mobile: reclaim horizontal space so tagline doesn't clip */
+@media (max-width: 420px){
+  /* container currently gives 20px left/right; reduce it */
+  .container{
+    width: calc(100% - 24px); /* 12px left/right */
+  }
+
+  /* tighten brand layout */
+  .brand{
+    gap:12px;
+  }
+
+  /* slightly smaller logo on tiny phones only */
+  .brand__logo{
+    width:62px;
+    height:62px;
+  }
+  .brand__mark{
+    width:62px;
+    height:62px;
+  }
+
+  /* keep tagline one line, but give it every pixel */
+  .brand__tagline{
+    font-size:12px;
+    letter-spacing:-0.1px;
+  }
+}
+
 
 
 
