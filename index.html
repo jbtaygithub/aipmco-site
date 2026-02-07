@@ -3,12 +3,12 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <meta name="description" content="AIPMCO helps PMOs and delivery leaders modernize workflows and implement practical, tool-agnostic AI patterns that stick." />
-  <title>AIPMCO — AI Powered Projects</title>
+  <meta name="description" content="AI Powered Projects helps PMOs and delivery leaders modernize workflows and implement practical, tool-agnostic AI patterns that stick." />
+  <title>AI Powered Projects</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./styles.css" />
 </head>
 
@@ -22,27 +22,23 @@
   </div>
 
   <!-- Header -->
-<header class="header">
-  <div class="container header__inner">
-    <!-- Brand: logo + title -->
-    <a class="brand brand--title" href="#top" aria-label="AI Powered Projects Home">
-      <img class="brand__logo" src="./assets/logo.png" alt="AI Powered Projects logo"
-           onerror="this.style.display='none';document.querySelector('.brand__mark').style.display='grid';" />
-      <div class="brand__mark" style="display:none;">AI</div>
+  <header class="header">
+    <div class="container header__inner">
+      <a class="brand" href="#top" aria-label="AI Powered Projects Home">
+        <img class="brand__logo" src="./assets/logo.png" alt="AI Powered Projects logo"
+             onerror="this.style.display='none';document.querySelector('.brand__mark').style.display='grid';" />
+        <div class="brand__mark" style="display:none;">AI</div>
+        <div class="brand__title">AI Powered Projects</div>
+      </a>
 
-      <div class="brand__title">AI Powered Projects</div>
-    </a>
-
-    <!-- Nav -->
-    <nav class="nav" aria-label="Primary">
-      <a href="#services">Services</a>
-      <a href="#framework">Framework</a>
-      <a href="#scorecard">Scorecard</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </div>
-</header>
-
+      <nav class="nav" aria-label="Primary">
+        <a href="#services">Services</a>
+        <a href="#framework">Framework</a>
+        <a href="#scorecard">Scorecard</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
 
   <main id="top">
     <!-- Hero -->
@@ -91,7 +87,7 @@
     </section>
 
     <!-- Why (DARK) -->
-    <section class="section section--dark">
+    <section class="section section--dark" id="why">
       <div class="container">
         <div class="section__head">
           <h2>Why AI efforts stall in delivery</h2>
@@ -174,7 +170,7 @@
               <div class="day"><strong>Day 3:</strong> Hands-on Workflow Redesign + AI Pilot Selection</div>
             </div>
 
-            <div class="actions actions--row">
+            <div class="actions">
               <a class="btn btn--primary" href="https://calendly.com/aipmco" target="_blank" rel="noopener">Book a Fit Check</a>
               <a class="btn btn--secondary" href="mailto:contact@aipmco.com?subject=3-Day%20AI-Powered%20Delivery%20Workshop%20Inquiry">
                 Request dates
@@ -212,6 +208,7 @@
             </p>
           </div>
 
+          <!-- Note: data-netlify is harmless on Cloudflare, but not processed. We'll switch to Cloudflare Forms/Workers next if desired. -->
           <form class="form" name="scorecard" method="POST" data-netlify="true">
             <input type="hidden" name="form-name" value="scorecard" />
             <div class="form__row">
@@ -259,7 +256,7 @@
   <footer class="footer">
     <div class="container footer__inner">
       <div class="footer__left">
-        <div class="footer__brand">© <span id="year"></span> AIPMCO</div>
+        <div class="footer__brand">© <span id="year"></span> AI Powered Projects</div>
         <div class="footer__meta">
           <a href="mailto:contact@aipmco.com">contact@aipmco.com</a>
           <span class="dot">•</span>
@@ -275,8 +272,14 @@
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
 
-    // Scroll reveal
-    const revealEls = document.querySelectorAll('.reveal');
+    // Scroll reveal + stagger (more motion)
+    const revealEls = Array.from(document.querySelectorAll('.reveal'));
+
+    // Apply a stagger delay, capped so it stays snappy
+    revealEls.forEach((el, i) => {
+      el.style.transitionDelay = `${Math.min(i * 80, 480)}ms`;
+    });
+
     const io = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
@@ -290,5 +293,3 @@
   </script>
 </body>
 </html>
-
-
