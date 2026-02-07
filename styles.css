@@ -13,7 +13,6 @@
   --radius2:12px;
   --max:1120px;
 
-  /* Dark section */
   --navy:#071427;
   --navyText:#eef4ff;
   --navyMuted:rgba(238,244,255,.78);
@@ -26,8 +25,6 @@ body{
   background:var(--bg);
   color:var(--text);
   line-height:1.5;
-
-  /* Breathing room at the very top */
   padding-top:10px;
 }
 
@@ -45,32 +42,27 @@ a:hover{opacity:.92}
   top:0;
   background:rgba(255,255,255,.88);
   backdrop-filter:saturate(160%) blur(10px);
-  border-bottom:1px solid rgba(11,18,32,.10);
+  border-bottom:1px solid var(--border);
   z-index:50;
-
-  /* Keep breathing room but remove the “card” squeeze */
   margin-top:8px;
-  border-radius:0;
 }
-
 .header__inner{
   display:flex;
   align-items:center;
   justify-content:space-between;
   gap:14px;
-  padding:16px 0;   /* was 16px 14px */
+  padding:16px 0;
 }
 
-/* Brand (logo + stacked title/tagline) */
+/* Brand */
 .brand{
   display:flex;
   align-items:center;
   gap:16px;
   min-width:0;
-  flex: 1 1 auto;   /* NEW: take remaining space */
+  flex:1 1 auto;
 }
 
-/* Logo: +30% from prior 53px => ~69px */
 .brand__logo{
   width:69px;
   height:69px;
@@ -89,7 +81,6 @@ a:hover{opacity:.92}
   font-size:18px;
 }
 
-/* Title + tagline stack */
 .brand__stack{
   display:flex;
   flex-direction:column;
@@ -97,26 +88,20 @@ a:hover{opacity:.92}
   min-width:0;
 }
 
-/* Title: BLUE (brand), no black */
 .brand__title{
   font-weight:900;
   letter-spacing:-0.6px;
   font-size:32px;
   line-height:1;
-  color:var(--blue2); /* brand blue */
+  color:var(--blue2);
   white-space:nowrap;
 }
 
-/* Tagline: keep ONE LINE always */
 .brand__tagline{
-  font-size:18px;
+  font-size:13px;
   color:var(--muted);
   line-height:1.2;
-
-  white-space:nowrap;  /* keep one line */
-  overflow:visible;    /* remove truncation */
-  text-overflow:clip;  /* remove ellipsis */
-  max-width:none;      /* remove clamps */
+  white-space:nowrap;
 }
 
 /* Nav */
@@ -126,10 +111,9 @@ a:hover{opacity:.92}
   align-items:center;
   font-size:14px;
   color:var(--muted);
-  flex: 0 0 auto;   /* NEW: don’t grow */
-  margin-left:auto; /* NEW: push nav to far right */
+  flex:0 0 auto;
+  margin-left:auto;
 }
-
 .nav a{
   padding:8px 10px;
   border-radius:10px;
@@ -198,7 +182,7 @@ a:hover{opacity:.92}
 }
 .muted{ color:var(--muted); margin:0; }
 
-/* Dark alternating sections */
+/* Dark sections */
 .section--dark{
   background:
     radial-gradient(900px 420px at 15% 20%, rgba(31,111,235,.22), transparent 60%),
@@ -215,7 +199,7 @@ a:hover{opacity:.92}
 .grid--3{ grid-template-columns:repeat(3, 1fr); }
 .grid--4{ grid-template-columns:repeat(4, 1fr); }
 
-/* Panels (light sections) */
+/* Panels */
 .panel{
   background:
     linear-gradient(#ffffff, #ffffff) padding-box,
@@ -240,7 +224,7 @@ a:hover{opacity:.92}
 }
 .panel--tight{ padding:16px; }
 
-/* Panels on dark sections */
+/* Panels on dark */
 .section--dark .panel{
   background:
     linear-gradient(rgba(255,255,255,.06), rgba(255,255,255,.04)) padding-box,
@@ -314,7 +298,7 @@ a:hover{opacity:.92}
 .mini__title{ font-weight:700; margin-bottom:6px; }
 .section--dark .mini{ border-top-color: rgba(255,255,255,.12); }
 
-/* CTA block */
+/* CTA */
 .cta{
   display:grid;
   grid-template-columns: 1.1fr .9fr;
@@ -423,7 +407,7 @@ input[type="email"]:focus{
   white-space:nowrap;border:0;
 }
 
-/* Reveal animation (stronger) */
+/* Reveal */
 .reveal{
   opacity:0;
   transform: translateY(26px) scale(.985);
@@ -464,67 +448,31 @@ input[type="email"]:focus{
   .hero h1{ font-size:38px; }
 
   .brand__title{ font-size:26px; }
-
-  /* Keep tagline one line; just tighten clamp */
-  .brand__tagline{ max-width: 320px; }
 }
 
+/* Mobile: make header tight + centered */
 @media (max-width: 420px){
-  .hero h1{ font-size:34px; }
-  .btn{ white-space:normal; }
+  .container{ width: calc(100% - 24px); }
 
-  .brand{ gap:14px; }
+  .brand{
+    gap:6px;
+    align-items:center; /* IMPORTANT: centers stack relative to logo */
+  }
 
-  /* Slightly smaller title on tiny phones */
+  .brand__logo{ width:62px; height:62px; }
+  .brand__mark{ width:62px; height:62px; }
+
+  .brand__stack{ gap:2px; }
+
   .brand__title{ font-size:22px; }
 
-  /* One-line tagline w/ ellipsis if needed */
-  .brand__tagline{ max-width: 240px; }
-}
-
-/* Mobile: reclaim horizontal space so tagline doesn't clip */
-/* Mobile: reduce tagline font so it fits on one line */
-/* Mobile: cut logo-to-text spacing by ~50% to prevent clipping */
-@media (max-width: 420px){
-  .brand{
-    gap:6px;          /* was ~12–16px */
-    align-items:flex-start;
-  }
-
-  /* tighten vertical spacing too */
-  .brand__stack{
-    gap:2px;          /* was 4px */
-  }
-}
-  /* tighten brand layout */
-  .brand{
-    gap:12px;
-  }
-
-  /* slightly smaller logo on tiny phones only */
-  .brand__logo{
-    width:62px;
-    height:62px;
-  }
-  .brand__mark{
-    width:62px;
-    height:62px;
-  }
-
-  /* keep tagline one line, but give it every pixel */
+  /* Keep one line; if you later change copy longer, reduce here */
   .brand__tagline{
-    font-size:11px;
-    letter-spacing:-0.1px;
+    font-size:11.5px;
+    letter-spacing:-0.2px;
+    white-space:nowrap;
   }
+
+  .hero h1{ font-size:34px; }
+  .btn{ white-space:normal; }
 }
-
-
-
-
-
-
-
-
-
-
-
