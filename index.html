@@ -22,27 +22,27 @@
   </div>
 
   <!-- Header -->
-  <header class="header">
-    <div class="container header__inner">
-      <a class="brand" href="#top" aria-label="AIPMCO Home">
-        <img class="brand__logo" src="./assets/logo.png" alt="AIPMCO logo"
-             onerror="this.style.display='none';document.querySelector('.brand__mark').style.display='grid';" />
-        <div class="brand__mark" style="display:none;">AI</div>
+ <header class="header">
+  <div class="container header__inner">
+    <!-- Left: logo only -->
+    <a class="logo-link" href="#top" aria-label="AI Powered Projects Home">
+      <img class="brand__logo" src="./assets/logo.png" alt="AI Powered Projects logo"
+           onerror="this.style.display='none';document.querySelector('.brand__mark').style.display='grid';" />
+      <div class="brand__mark" style="display:none;">AI</div>
+    </a>
 
-        <div class="brand__text">
-          <div class="brand__name">AIPMCO</div>
-          <div class="brand__tag">AI Powered Projects</div>
-        </div>
-      </a>
+    <!-- Center: title -->
+    <div class="header__title">AI Powered Projects</div>
 
-      <nav class="nav" aria-label="Primary">
-        <a href="#services">Services</a>
-        <a href="#framework">Framework</a>
-        <a href="#scorecard">Scorecard</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </div>
-  </header>
+    <!-- Right: nav -->
+    <nav class="nav" aria-label="Primary">
+      <a href="#services">Services</a>
+      <a href="#framework">Framework</a>
+      <a href="#scorecard">Scorecard</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
 
   <main id="top">
     <!-- Hero -->
@@ -290,3 +290,4 @@
   </script>
 </body>
 </html>
+
