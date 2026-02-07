@@ -45,19 +45,20 @@ a:hover{opacity:.92}
   top:0;
   background:rgba(255,255,255,.88);
   backdrop-filter:saturate(160%) blur(10px);
-  border-bottom:1px solid var(--border);
+  border-bottom:1px solid rgba(11,18,32,.10);
   z-index:50;
 
-  /* Space above header + subtle "card" feel */
+  /* Keep breathing room but remove the “card” squeeze */
   margin-top:8px;
-  border-radius:14px;
+  border-radius:0;
 }
+
 .header__inner{
   display:flex;
   align-items:center;
   justify-content:space-between;
-  gap:18px;
-  padding:16px 14px;
+  gap:14px;
+  padding:16px 0;   /* was 16px 14px */
 }
 
 /* Brand (logo + stacked title/tagline) */
@@ -477,3 +478,4 @@ input[type="email"]:focus{
   /* One-line tagline w/ ellipsis if needed */
   .brand__tagline{ max-width: 240px; }
 }
+
