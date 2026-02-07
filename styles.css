@@ -127,7 +127,10 @@ a:hover{opacity:.92}
   align-items:center;
   font-size:14px;
   color:var(--muted);
+  flex: 0 0 auto;   /* NEW: don’t grow */
+  margin-left:auto; /* NEW: push nav to far right */
 }
+
 .nav a{
   padding:8px 10px;
   border-radius:10px;
@@ -479,5 +482,6 @@ input[type="email"]:focus{
   /* One-line tagline w/ ellipsis if needed */
   .brand__tagline{ max-width: 240px; }
 }
+
 
 
