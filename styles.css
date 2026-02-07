@@ -484,17 +484,18 @@ input[type="email"]:focus{
 
 /* Mobile: reclaim horizontal space so tagline doesn't clip */
 /* Mobile: reduce tagline font so it fits on one line */
+/* Mobile: cut logo-to-text spacing by ~50% to prevent clipping */
 @media (max-width: 420px){
-  .brand__tagline{
-    font-size:10px;
-    letter-spacing:-0.2px;
-    white-space:nowrap;
-    overflow:visible;
-    text-overflow:clip;
+  .brand{
+    gap:6px;          /* was ~12–16px */
+    align-items:flex-start;
+  }
+
+  /* tighten vertical spacing too */
+  .brand__stack{
+    gap:2px;          /* was 4px */
   }
 }
-
-
   /* tighten brand layout */
   .brand{
     gap:12px;
@@ -516,6 +517,7 @@ input[type="email"]:focus{
     letter-spacing:-0.1px;
   }
 }
+
 
 
 
