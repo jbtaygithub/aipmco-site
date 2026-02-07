@@ -109,7 +109,7 @@ a:hover{opacity:.92}
 
 /* Tagline: keep ONE LINE always */
 .brand__tagline{
-  font-size:12px;
+  font-size:14px;
   color:var(--muted);
   line-height:1.2;
 
@@ -513,10 +513,11 @@ input[type="email"]:focus{
 
   /* keep tagline one line, but give it every pixel */
   .brand__tagline{
-    font-size:10px;
+    font-size:11px;
     letter-spacing:-0.1px;
   }
 }
+
 
 
 
