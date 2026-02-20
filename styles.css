@@ -544,3 +544,27 @@ input[type="email"]:focus{
   .wim__step{ grid-template-columns: 46px 1fr; }
   .wim__num{ width: 46px; height: 46px; border-radius: 12px; }
 }
+/* =============================== */
+/* WIM image-only sections (APPEND) */
+/* =============================== */
+.wim__imgwrap{
+  border-radius: var(--radius);
+  border: 1px solid rgba(31,111,235,.18);
+  background: rgba(255,255,255,.92); /* gives your PNGs a clean “card” */
+  box-shadow: var(--shadow);
+  padding: 12px;
+}
+
+.wim__imgwrap img{
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: calc(var(--radius) - 8px);
+}
+
+/* On dark sections, keep the image card bright and readable */
+.section--dark .wim__imgwrap{
+  border-color: rgba(255,255,255,.18);
+  background: rgba(255,255,255,.96);
+  box-shadow: 0 18px 48px rgba(0,0,0,.35);
+}
