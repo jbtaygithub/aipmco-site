@@ -6,17 +6,8 @@
   <title>AI Powered Projects — Practical AI for Smarter Project Delivery</title>
   <meta name="description" content="We help teams deliver faster and smarter with practical, systems-first, tool-agnostic AI-enabled workflows that actually stick." />
 
+  <!-- Root-relative so it loads on all routes -->
   <link rel="stylesheet" href="/styles.css" />
-
-  <!-- Optional: if you have a logo in /assets, set it here -->
-  <!-- <link rel="icon" href="assets/favicon.png" /> -->
-
-  <!-- Inter is referenced in CSS; if you want a guaranteed load, uncomment -->
-  <!--
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
-  -->
 </head>
 
 <body id="top">
@@ -25,8 +16,7 @@
     <div class="container">
       <div class="header__inner">
         <a class="brand" href="#top" aria-label="AI Powered Projects">
-          <!-- Logo -->
-          <img class="brand__logo" src="assets/logo.png" alt="AI Powered Projects logo" />
+          <img class="brand__logo" src="/assets/logo.png" alt="AI Powered Projects logo" />
 
           <div class="brand__stack">
             <div class="brand__title">AI Powered Projects</div>
@@ -55,7 +45,7 @@
           </p>
 
           <div class="actions">
-            <a class="btn btn--secondary" href="assets/pitch-deck.pdf" target="_blank" rel="noopener">View Pitch Deck</a>
+            <a class="btn btn--secondary" href="/assets/pitch-deck.pdf" target="_blank" rel="noopener">View Pitch Deck</a>
             <a class="btn btn--primary" href="https://calendly.com/" target="_blank" rel="noopener">Book a 20-min Fit Check</a>
             <a class="btn btn--secondary" href="mailto:contact@aipmco.com?subject=AI%20Powered%20Projects%20Inquiry">Email us</a>
           </div>
@@ -87,7 +77,9 @@
     </div>
   </section>
 
-  <!-- Why stall -->
+  <!-- BACKGROUND SEQUENCE STARTS: gray → white → dark (lighter blue) → repeat -->
+
+  <!-- 1) gray -->
   <section class="section section--tint">
     <div class="container">
       <div class="section__head reveal">
@@ -117,7 +109,7 @@
     </div>
   </section>
 
-  <!-- Framework -->
+  <!-- 2) white -->
   <section class="section" id="framework">
     <div class="container">
       <div class="section__head reveal">
@@ -150,57 +142,68 @@
     </div>
   </section>
 
-  <!-- ========================= -->
-  <!-- WIM SECTIONS              -->
-  <!-- Inserted after Framework  -->
-  <!-- ========================= -->
-
-  <section class="section section--tint" id="wim">
+  <!-- 3) dark (lighter blue) -->
+  <section class="section section--dark" id="wim">
     <div class="container">
       <div class="section__head reveal">
         <h2>Workflow Intelligence Map</h2>
       </div>
-      <div class="wim__imgwrap reveal">
+      <div class="wim__imgwrap wim__imgwrap--crop50 reveal">
         <img src="/assets/wim-01.png" alt="Workflow Intelligence Map" loading="lazy" />
       </div>
     </div>
   </section>
 
-  <section class="section section--dark" id="wim-how">
+  <!-- 4) gray -->
+  <section class="section section--tint" id="wim-how-1">
     <div class="container">
       <div class="section__head reveal">
         <h2>How WIM works</h2>
       </div>
-      <div class="wim__imgwrap reveal">
-        <img src="/assets/wim-02.png" alt="How WIM works" loading="lazy" />
+      <div class="wim__imgwrap wim__imgwrap--crop50 reveal">
+        <img src="/assets/wim-02.png" alt="How WIM works (part 1)" loading="lazy" />
       </div>
     </div>
   </section>
 
-  <section class="section section--tint" id="wim-recs">
+  <!-- 5) white -->
+  <section class="section" id="wim-how-2">
     <div class="container">
       <div class="section__head reveal">
-        <h2>Tool-agnostic AI recommendations</h2>
+        <h2>How WIM works</h2>
       </div>
-      <div class="wim__imgwrap reveal">
-        <img src="/assets/wim-03.png" alt="Tool-agnostic AI recommendations" loading="lazy" />
+      <div class="wim__imgwrap wim__imgwrap--crop50 reveal">
+        <img src="/assets/wim-03.png" alt="How WIM works (part 2)" loading="lazy" />
       </div>
     </div>
   </section>
 
-  <section class="section section--dark" id="wim-outputs">
+  <!-- 6) dark (lighter blue) -->
+  <section class="section section--dark" id="ai-capabilities">
+    <div class="container">
+      <div class="section__head reveal">
+        <h2>AI capabilities</h2>
+      </div>
+      <div class="wim__imgwrap wim__imgwrap--crop50 reveal">
+        <img src="/assets/wim-04.png" alt="AI capabilities" loading="lazy" />
+      </div>
+    </div>
+  </section>
+
+  <!-- 7) gray -->
+  <section class="section section--tint" id="wim-outputs">
     <div class="container">
       <div class="section__head reveal">
         <h2>WIM outputs and recommendations</h2>
       </div>
-      <div class="wim__imgwrap reveal">
-        <img src="/assets/wim-04.png" alt="WIM outputs and recommendations" loading="lazy" />
+      <div class="wim__imgwrap wim__imgwrap--crop50 reveal">
+        <img src="/assets/wim-05.png" alt="WIM outputs and recommendations" loading="lazy" />
       </div>
     </div>
   </section>
 
-  <!-- Services -->
-  <section class="section section--dark" id="services">
+  <!-- 8) white -->
+  <section class="section" id="services">
     <div class="container">
       <div class="section__head reveal">
         <h2>Services</h2>
@@ -251,8 +254,8 @@
     </div>
   </section>
 
-  <!-- Scorecard -->
-  <section class="section" id="scorecard">
+  <!-- 9) dark (lighter blue) -->
+  <section class="section section--dark" id="scorecard">
     <div class="container">
       <div class="cta reveal">
         <div>
@@ -271,7 +274,7 @@
     </div>
   </section>
 
-  <!-- Contact -->
+  <!-- 10) gray -->
   <section class="section section--tint" id="contact">
     <div class="container">
       <div class="section__head reveal">
@@ -331,14 +334,12 @@
   </footer>
 
   <script>
-    // Simple reveal-on-scroll (matches .reveal / .reveal.in-view in styles.css)
     (function () {
       const els = Array.from(document.querySelectorAll(".reveal"));
       if (!("IntersectionObserver" in window)) {
         els.forEach(el => el.classList.add("in-view"));
         return;
       }
-
       const io = new IntersectionObserver((entries) => {
         entries.forEach(e => {
           if (e.isIntersecting) {
@@ -347,11 +348,8 @@
           }
         });
       }, { threshold: 0.15 });
-
       els.forEach(el => io.observe(el));
     })();
   </script>
 </body>
 </html>
-
-
