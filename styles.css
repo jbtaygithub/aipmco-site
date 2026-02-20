@@ -626,3 +626,16 @@ input[type="email"]:focus{
   background: rgba(255,255,255,.96);
   box-shadow: 0 18px 48px rgba(0,0,0,.35);
 }
+
+/* ========================================= */
+/* Contact section on dark background (APPEND) */
+/* ========================================= */
+#contact.section--dark .textlink{
+  color: rgba(155,203,255,.95);
+}
+#contact.section--dark .textlink:hover{
+  opacity: .9;
+}
+#contact.section--dark .panel p{
+  color: var(--navyMuted);
+}
