@@ -2,71 +2,75 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AI Powered Projects — Practical AI for Smarter Project Delivery</title>
   <meta name="description" content="We help teams deliver faster and smarter with practical, systems-first, tool-agnostic AI-enabled workflows that actually stick." />
-  <title>AI Powered Projects</title>
 
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Optional: if you have a logo in /assets, set it here -->
+  <!-- <link rel="icon" href="assets/favicon.png" /> -->
+
+  <!-- Inter is referenced in CSS; if you want a guaranteed load, uncomment -->
+  <!--
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="./styles.css?v=20260207-6" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  -->
 </head>
 
-<body>
+<body id="top">
+  <!-- Header -->
   <header class="header">
-    <div class="container header__inner">
-      <a class="brand" href="#top" aria-label="AI Powered Projects Home">
-        <img class="brand__logo" src="./assets/logo.png" alt="AI Powered Projects logo"
-             onerror="this.style.display='none';document.querySelector('.brand__mark').style.display='grid';" />
-        <div class="brand__mark" style="display:none;">AI</div>
+    <div class="container">
+      <div class="header__inner">
+        <a class="brand" href="#top" aria-label="AI Powered Projects">
+          <!-- If you have a logo file, set src to it -->
+          <!-- <img class="brand__logo" src="assets/logo.png" alt="AI Powered Projects logo" /> -->
+          <div class="brand__mark" aria-hidden="true">AI</div>
 
-        <div class="brand__stack">
-          <div class="brand__title">AI Powered Projects</div>
-          <div class="brand__tagline">Practical AI for Smarter Project Delivery</div>
-        </div>
-      </a>
+          <div class="brand__stack">
+            <div class="brand__title">AI Powered Projects</div>
+            <div class="brand__tagline">Practical AI for Smarter Project Delivery</div>
+          </div>
+        </a>
 
-      <nav class="nav" aria-label="Primary">
-        <a href="#services">Services</a>
-        <a href="#framework">Framework</a>
-        <a href="#scorecard">Scorecard</a>
-        <a href="#contact">Contact</a>
-      </nav>
+        <nav class="nav" aria-label="Primary">
+          <a href="#services">Services</a>
+          <a href="#framework">Framework</a>
+          <a href="#scorecard">Scorecard</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
     </div>
   </header>
 
-  <main id="top">
-    <section class="hero">
-      <div class="container hero__inner">
-        <div class="hero__copy">
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero__inner">
+        <div class="reveal">
           <h1>AI-enabled delivery starts with fixing the system—not buying another tool.</h1>
           <p class="lede">
             We help teams deliver faster and smarter with practical, systems-first, tool-agnostic AI-enabled workflows that actually stick.
           </p>
 
           <div class="actions">
-            <a class="btn btn--primary" href="./assets/pitch-deck.pdf" target="_blank" rel="noopener">
-  View Pitch Deck
-</a>
-            <a class="btn btn--primary" href="https://calendly.com/aipmco" target="_blank" rel="noopener">
-              Book a 20-min Fit Check
-            </a>
-            <a class="btn btn--secondary" href="mailto:contact@aipmco.com">
-              Email us
-            </a>
+            <a class="btn btn--secondary" href="assets/pitch-deck.pdf" target="_blank" rel="noopener">View Pitch Deck</a>
+            <a class="btn btn--primary" href="https://calendly.com/" target="_blank" rel="noopener">Book a 20-min Fit Check</a>
+            <a class="btn btn--secondary" href="mailto:contact@aipmco.com?subject=AI%20Powered%20Projects%20Inquiry">Email us</a>
           </div>
 
-          <div class="microproof">
-            <div class="pill">Systems-first</div>
-            <div class="pill">Tool-agnostic</div>
-            <div class="pill">Workflow clarity</div>
-            <div class="pill">Pilot → Scale</div>
+          <div class="microproof" aria-label="Positioning pillars">
+            <span class="pill">Systems-first</span>
+            <span class="pill">Tool-agnostic</span>
+            <span class="pill">Workflow clarity</span>
+            <span class="pill">Pilot → Scale</span>
           </div>
         </div>
 
-        <div class="hero__card" aria-label="Quick overview">
-          <div class="card reveal">
+        <div class="hero__card reveal">
+          <div class="card">
             <div class="card__title">Start here</div>
             <div class="card__body">
               <ul class="checklist">
@@ -81,217 +85,389 @@
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="section section--dark" id="why">
-      <div class="container">
-        <div class="section__head">
-          <h2>Why AI efforts stall in delivery</h2>
-          <p class="muted">Most teams add AI on top of broken delivery systems. The result is faster documentation of the same problems.</p>
+  <!-- Why stall -->
+  <section class="section section--tint">
+    <div class="container">
+      <div class="section__head reveal">
+        <h2>Why AI efforts stall in delivery</h2>
+        <p class="muted">Most teams add AI on top of broken delivery systems. The result is faster documentation of the same problems.</p>
+      </div>
+
+      <div class="grid grid--3 reveal">
+        <div class="panel">
+          <div class="panel__kicker">01</div>
+          <h3>AI layered on top of broken workflows</h3>
+          <p>Without workflow clarity, AI amplifies inconsistency and rework.</p>
         </div>
 
+        <div class="panel">
+          <div class="panel__kicker">02</div>
+          <h3>Decision latency + unclear ownership</h3>
+          <p>If inputs and decision rights aren’t explicit, delivery slows—AI can’t fix that.</p>
+        </div>
+
+        <div class="panel">
+          <div class="panel__kicker">03</div>
+          <h3>PMs drowning in status while delivery slips anyway</h3>
+          <p>Tooling helps document the drift. Systems thinking prevents it.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Framework -->
+  <section class="section" id="framework">
+    <div class="container">
+      <div class="section__head reveal">
+        <h2>Our framework</h2>
+        <p class="muted">A practical, structured path from assessment to measurable improvement.</p>
+      </div>
+
+      <div class="grid grid--4 reveal">
+        <div class="panel">
+          <div class="panel__kicker">UNDERSTAND</div>
+          <h3>Understand</h3>
+          <p>Map workflows, constraints, and decision rights. Identify bottlenecks and failure modes.</p>
+        </div>
+        <div class="panel">
+          <div class="panel__kicker">IDENTIFY</div>
+          <h3>Identify</h3>
+          <p>Build a prioritized AI opportunity backlog (impact/effort/risk) tied to real outcomes.</p>
+        </div>
+        <div class="panel">
+          <div class="panel__kicker">IMPLEMENT</div>
+          <h3>Implement</h3>
+          <p>Pilot guarded workflows with templates, prompts, and verification—then iterate.</p>
+        </div>
+        <div class="panel">
+          <div class="panel__kicker">IMPROVE</div>
+          <h3>Improve</h3>
+          <p>Measure results, tune patterns, and scale with governance and enablement.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================= -->
+  <!-- WIM SECTIONS (NEW)        -->
+  <!-- Inserted after Framework  -->
+  <!-- ========================= -->
+
+  <section class="section section--tint" id="wim">
+    <div class="container">
+      <div class="section__head reveal">
+        <h2>Workflow Intelligence Map (WIM)</h2>
+        <p class="muted">The value-add tool we use to turn ambiguous workflows into decision-grade pilot plans.</p>
+      </div>
+
+      <div class="split reveal">
+        <div class="panel panel--tight">
+          <div class="panel__kicker">ONE TOOL • THREE METHODS • AI INSIGHTS</div>
+          <h3>Introduce the Workflow Intelligence Map</h3>
+          <p>
+            WIM combines structured process mapping with Lean analysis and AI-assisted opportunity discovery—so you get
+            clarity, priority, and a pilot path that sticks.
+          </p>
+
+          <div class="grid grid--3" style="margin-top:14px;">
+            <div class="panel panel--tight">
+              <div class="panel__kicker">SIPOC</div>
+              <h3>Inputs &amp; interfaces</h3>
+              <p>Suppliers, inputs, outputs, customers, and handoffs—made explicit.</p>
+            </div>
+            <div class="panel panel--tight">
+              <div class="panel__kicker">VSM</div>
+              <h3>Flow &amp; waste</h3>
+              <p>Cycle time, wait time, rework, and bottlenecks—visible in one map.</p>
+            </div>
+            <div class="panel panel--tight">
+              <div class="panel__kicker">AI</div>
+              <h3>Pilot discovery</h3>
+              <p>AI-assisted analysis and pilot recommendations tied to measurable outcomes.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="wim__media reveal">
+          <img src="assets/wim-01.png" alt="Workflow Intelligence Map overview" loading="lazy" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="wim-how">
+    <div class="container">
+      <div class="section__head reveal">
+        <h2>How WIM works</h2>
+        <p class="muted">Map → quantify → analyze → prioritize → pilot.</p>
+      </div>
+
+      <div class="split reveal">
+        <div class="panel panel--tight">
+          <div class="wim__steps">
+            <div class="wim__step">
+              <div class="wim__num">01</div>
+              <div>
+                <h3>Map the real workflow</h3>
+                <p>Capture steps, handoffs, tools, and ownership as the work actually happens.</p>
+              </div>
+            </div>
+
+            <div class="wim__step">
+              <div class="wim__num">02</div>
+              <div>
+                <h3>Add decision-grade detail</h3>
+                <p>SIPOC + timing + quality signals so analysis isn’t guesswork.</p>
+              </div>
+            </div>
+
+            <div class="wim__step">
+              <div class="wim__num">03</div>
+              <div>
+                <h3>Run Lean analysis</h3>
+                <p>Surface waste, bottlenecks, rework loops, and decision latency.</p>
+              </div>
+            </div>
+
+            <div class="wim__step">
+              <div class="wim__num">04</div>
+              <div>
+                <h3>Prioritize opportunities</h3>
+                <p>Build a ranked backlog by impact, effort, risk, and implementability.</p>
+              </div>
+            </div>
+
+            <div class="wim__step">
+              <div class="wim__num">05</div>
+              <div>
+                <h3>Select a pilot</h3>
+                <p>Leave with a clear pilot plan, KPIs, and governance-ready workflow.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="wim__media reveal">
+          <img src="assets/wim-02.png" alt="WIM method steps" loading="lazy" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--tint" id="wim-capabilities">
+    <div class="container">
+      <div class="section__head reveal">
+        <h2>Tool-agnostic AI recommendations</h2>
+        <p class="muted">WIM recommends pilots across the spectrum—so you pick what fits your systems and constraints.</p>
+      </div>
+
+      <div class="split reveal">
+        <div class="panel panel--tight">
+          <div class="wim__badges">
+            <div class="wim__badge"><span>Generative AI</span><small>Drafting, summarization, content transforms</small></div>
+            <div class="wim__badge"><span>Agentic AI</span><small>Multi-step task chains with guardrails</small></div>
+            <div class="wim__badge"><span>Orchestration</span><small>Connect tools, systems, and workflows</small></div>
+            <div class="wim__badge"><span>Specialized AI</span><small>Domain tools for analytics, classification, QA</small></div>
+            <div class="wim__badge"><span>RPA + AI</span><small>Automation + decision support</small></div>
+          </div>
+        </div>
+
+        <div class="wim__media reveal">
+          <img src="assets/wim-03.png" alt="AI capability types" loading="lazy" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="wim-outputs">
+    <div class="container">
+      <div class="section__head reveal">
+        <h2>What you get</h2>
+        <p class="muted">Concrete deliverables that reduce ambiguity and accelerate execution.</p>
+      </div>
+
+      <div class="split reveal">
         <div class="grid grid--3">
-          <div class="panel reveal">
-            <div class="panel__kicker">01</div>
-            <h3>AI layered on top of broken workflows</h3>
-            <p>Without workflow clarity, AI amplifies inconsistency and rework.</p>
+          <div class="panel panel--tight">
+            <div class="panel__kicker">DELIVERABLE</div>
+            <h3>Workflow Intelligence Map</h3>
+            <p>A structured map with SIPOC + timing + ownership + constraints—ready for stakeholder alignment.</p>
           </div>
 
-          <div class="panel reveal">
-            <div class="panel__kicker">02</div>
-            <h3>Decision latency + unclear ownership</h3>
-            <p>If inputs and decision rights aren’t explicit, delivery slows—AI can’t fix that.</p>
+          <div class="panel panel--tight">
+            <div class="panel__kicker">DELIVERABLE</div>
+            <h3>Lean analysis summary</h3>
+            <p>Waste, bottlenecks, decision latency, and rework loops with “where to intervene” clarity.</p>
           </div>
 
-          <div class="panel reveal">
-            <div class="panel__kicker">03</div>
-            <h3>PMs drowning in status while delivery slips anyway</h3>
-            <p>Tooling helps document the drift. Systems thinking prevents it.</p>
+          <div class="panel panel--tight">
+            <div class="panel__kicker">DELIVERABLE</div>
+            <h3>Top 3 pilot recommendations</h3>
+            <p>Impact/effort/risk, KPIs, workflow guardrails, and implementation steps to get to value fast.</p>
           </div>
+        </div>
+
+        <div class="wim__media reveal">
+          <img src="assets/wim-04.png" alt="WIM outputs and recommendations" loading="lazy" />
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="section" id="framework">
-      <div class="container">
-        <div class="section__head">
-          <h2>Our framework</h2>
-          <p class="muted">A practical, structured path from assessment to measurable improvement.</p>
-        </div>
-
-        <div class="grid grid--4">
-          <div class="panel panel--tight reveal">
-            <h3>Understand</h3>
-            <p>Map workflows, constraints, and decision rights. Identify bottlenecks and failure modes.</p>
-          </div>
-
-          <div class="panel panel--tight reveal">
-            <h3>Identify</h3>
-            <p>Build a prioritized AI opportunity backlog (impact/effort/risk) tied to real outcomes.</p>
-          </div>
-
-          <div class="panel panel--tight reveal">
-            <h3>Implement</h3>
-            <p>Pilot guarded workflows with templates, prompts, and verification—then iterate.</p>
-          </div>
-
-          <div class="panel panel--tight reveal">
-            <h3>Improve</h3>
-            <p>Measure results, tune patterns, and scale with governance and enablement.</p>
-          </div>
-        </div>
+  <!-- Services -->
+  <section class="section section--dark" id="services">
+    <div class="container">
+      <div class="section__head reveal">
+        <h2>Services</h2>
+        <p class="muted">Start with a focused engagement designed to produce clarity and momentum.</p>
       </div>
-    </section>
 
-    <section class="section section--dark" id="services">
-      <div class="container">
-        <div class="section__head">
-          <h2>Services</h2>
-          <p class="muted">Start with a focused engagement designed to produce clarity and momentum.</p>
-        </div>
+      <div class="split reveal">
+        <div class="panel panel--service">
+          <div class="panel__kicker">WORKSHOP</div>
+          <h3>3-Day AI-Powered Delivery Workshop</h3>
+          <p>
+            A practical, hands-on workshop that provides a clear foundation for AI adoption—grounded in systems thinking,
+            workflow clarity, and a structured method for selecting and implementing an AI pilot.
+          </p>
 
-        <div class="split">
-          <div class="panel panel--service reveal">
-            <h3>3-Day AI-Powered Delivery Workshop</h3>
-            <p>
-              A practical, hands-on workshop that provides a clear foundation for AI adoption—grounded in systems thinking,
-              workflow clarity, and a structured method for selecting and implementing an AI pilot.
-            </p>
-
-            <div class="days">
-              <div class="day"><strong>Day 1:</strong> PM Core + Workflow Mapping</div>
-              <div class="day"><strong>Day 2:</strong> AI intro + the AI/PM Framework</div>
-              <div class="day"><strong>Day 3:</strong> Hands-on Workflow Redesign + AI Pilot Selection</div>
-            </div>
-
-            <div class="actions">
-              <a class="btn btn--primary" href="https://calendly.com/aipmco" target="_blank" rel="noopener">Book a Fit Check</a>
-
-              <a class="btn btn--secondary" href="mailto:contact@aipmco.com?subject=3-Day%20AI-Powered%20Delivery%20Workshop%20Inquiry">
-                Request dates
-              </a>
-
-              <a class="btn btn--secondary" href="https://www.linkedin.com/in/jason-taylor-pmp/" target="_blank" rel="noopener">
-                Meet our expert facilitator
-              </a>
-            </div>
+          <div class="days">
+            <div class="day">Day 1: PM Core + Workflow Mapping</div>
+            <div class="day">Day 2: AI intro + the AI/PM Framework</div>
+            <div class="day">Day 3: Hands-on Workflow Redesign + AI Pilot Selection</div>
           </div>
 
-          <div class="panel panel--aside reveal">
-            <h3>What you’ll walk away with</h3>
-            <ul class="bullets">
-              <li>Workflow map + bottlenecks + constraints</li>
-              <li>Clarity on decision rights and “decision-grade” inputs</li>
-              <li>Prioritized AI use-case shortlist</li>
-              <li>Pilot recommendation with success metrics</li>
-              <li>Templates to standardize outputs and reduce drift</li>
-            </ul>
+          <div class="actions">
+            <a class="btn btn--primary" href="https://calendly.com/" target="_blank" rel="noopener">Book a Fit Check</a>
+            <a class="btn btn--secondary" href="mailto:contact@aipmco.com?subject=Workshop%20Dates%20Request">Request dates</a>
+            <a class="btn btn--secondary" href="https://www.linkedin.com/company/ai-powered-projects-consulting-llc" target="_blank" rel="noopener">Meet our expert facilitator</a>
+          </div>
+        </div>
 
-            <div class="mini">
-              <div class="mini__title">Prefer remote?</div>
-              <p class="muted">We can tailor a remote version for distributed teams, or provide enablement materials for internal rollout.</p>
+        <div class="panel panel--aside">
+          <div class="panel__kicker">OUTCOMES</div>
+          <h3>What you’ll walk away with</h3>
+          <ul class="bullets">
+            <li>Workflow map + bottlenecks + constraints</li>
+            <li>Clarity on decision rights and “decision-grade” inputs</li>
+            <li>Prioritized AI use-case shortlist</li>
+            <li>Pilot recommendation with success metrics</li>
+            <li>Templates to standardize outputs and reduce drift</li>
+          </ul>
+
+          <div class="mini">
+            <div class="mini__title">Prefer remote?</div>
+            <div class="muted">
+              We can tailor a remote version for distributed teams, or provide enablement materials for internal rollout.
             </div>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="section section--tint" id="scorecard">
-      <div class="container">
-        <div class="cta reveal">
-          <div class="cta__copy">
-            <h2>Get the AI-in-Delivery Readiness Scorecard</h2>
-            <p class="muted">
-              A short diagnostic to identify what’s broken <em>before</em> you implement AI—plus the highest-leverage starting points.
-            </p>
-          </div>
+  <!-- Scorecard -->
+  <section class="section" id="scorecard">
+    <div class="container">
+      <div class="cta reveal">
+        <div>
+          <h2>Get the AI-in-Delivery Readiness Scorecard</h2>
+          <p class="muted">A short diagnostic to identify what’s broken before you implement AI—plus the highest-leverage starting points.</p>
+        </div>
 
-         <div class="form">
-  <div class="form__row" style="justify-content: center;">
-    <a class="btn btn--primary btn--full" 
-       href="mailto:contact@aipmco.com?subject=Request%3A%20AI%20Readiness%20Scorecard&body=I'd%20like%20to%20request%20the%20AI-in-Delivery%20Readiness%20Scorecard.%0A%0AThanks!"
-       style="max-width: 300px;">
-       Email me the Scorecard
-    </a>
-  </div>
-  <p class="form__hint" style="text-align: center; margin-top: 1rem;">
-    (Clicking will open your email app)
-  </p>
-</div>
+        <div>
+          <a class="btn btn--primary btn--full"
+             href="mailto:contact@aipmco.com?subject=Send%20me%20the%20AI-in-Delivery%20Readiness%20Scorecard&body=Hi%20AI%20Powered%20Projects%2C%0A%0APlease%20send%20me%20the%20AI-in-Delivery%20Readiness%20Scorecard.%0A%0AName%3A%0ACompany%3A%0ARole%3A%0AWhat%20workflow%20are%20you%20trying%20to%20improve%3F%0ATimeline%3A%0A%0AThanks%2C">
+            Email me the Scorecard
+          </a>
+          <p class="form__hint">(Clicking will open your email app)</p>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="section" id="contact">
-      <div class="container">
-        <div class="section__head">
-          <h2>Contact</h2>
-          <p class="muted">Book a call, email us, or connect on LinkedIn.</p>
+  <!-- Contact -->
+  <section class="section section--tint" id="contact">
+    <div class="container">
+      <div class="section__head reveal">
+        <h2>Contact</h2>
+        <p class="muted">Book a call, email us, or connect on LinkedIn.</p>
+      </div>
+
+      <div class="grid grid--3 reveal">
+        <div class="panel">
+          <div class="panel__kicker">BOOK A CALL</div>
+          <h3>Book a call</h3>
+          <p>Use Calendly to grab a time that works.</p>
+          <div style="margin-top:12px;">
+            <a class="btn btn--secondary" href="https://calendly.com/" target="_blank" rel="noopener">Book via Calendly</a>
+          </div>
         </div>
 
-        <div class="grid grid--3">
-          <div class="panel reveal">
-            <h3>Book a call</h3>
-            <p>Use Calendly to grab a time that works.</p>
-            <a class="btn btn--primary btn--full" href="https://calendly.com/aipmco" target="_blank" rel="noopener">Book via Calendly</a>
+        <div class="panel">
+          <div class="panel__kicker">EMAIL</div>
+          <h3>Email</h3>
+          <p>Tell us what you’re trying to improve and your timeline.</p>
+          <div style="margin-top:12px;">
+            <a class="textlink" href="mailto:contact@aipmco.com">contact@aipmco.com</a>
           </div>
+        </div>
 
-          <div class="panel reveal">
-            <h3>Email</h3>
-            <p>Tell us what you’re trying to improve and your timeline.</p>
-            <a class="btn btn--secondary btn--full" href="mailto:contact@aipmco.com">contact@aipmco.com</a>
-          </div>
-
-          <div class="panel reveal">
-            <h3>LinkedIn</h3>
-            <p>Follow the page for practical workflows and templates.</p>
-            <a class="btn btn--secondary btn--full" href="https://www.linkedin.com/company/ai-powered-projects-consulting-llc" target="_blank" rel="noopener">Visit LinkedIn Page</a>
+        <div class="panel">
+          <div class="panel__kicker">LINKEDIN</div>
+          <h3>LinkedIn</h3>
+          <p>Follow the page for practical workflows and templates.</p>
+          <div style="margin-top:12px;">
+            <a class="btn btn--secondary" href="https://www.linkedin.com/company/ai-powered-projects-consulting-llc" target="_blank" rel="noopener">Visit LinkedIn Page</a>
           </div>
         </div>
       </div>
-    </section>
-  </main>
+    </div>
+  </section>
 
+  <!-- Footer -->
   <footer class="footer">
-    <div class="container footer__inner">
-      <div class="footer__left">
-        <div class="footer__brand">© <span id="year"></span> AI Powered Projects</div>
-        <div class="footer__meta">
-          <a href="mailto:contact@aipmco.com">contact@aipmco.com</a>
-          <span class="dot">•</span>
-          <a href="https://www.linkedin.com/company/ai-powered-projects-consulting-llc" target="_blank" rel="noopener">LinkedIn</a>
+    <div class="container">
+      <div class="footer__inner">
+        <div>
+          <div>© AI Powered Projects</div>
+          <div class="footer__meta">
+            <a href="mailto:contact@aipmco.com">contact@aipmco.com</a>
+            <span class="dot">•</span>
+            <a href="https://www.linkedin.com/company/ai-powered-projects-consulting-llc" target="_blank" rel="noopener">LinkedIn</a>
+          </div>
         </div>
-      </div>
-      <div class="footer__right">
-        <a class="textlink" href="#top">Back to top ↑</a>
+
+        <div>
+          <a class="textlink" href="#top">Back to top ↑</a>
+        </div>
       </div>
     </div>
   </footer>
 
   <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
+    // Simple reveal-on-scroll (matches .reveal / .reveal.in-view in styles.css)
+    (function () {
+      const els = Array.from(document.querySelectorAll(".reveal"));
+      if (!("IntersectionObserver" in window)) {
+        els.forEach(el => el.classList.add("in-view"));
+        return;
+      }
 
-    // Scroll reveal + stagger
-    const revealEls = Array.from(document.querySelectorAll('.reveal'));
-    revealEls.forEach((el, i) => {
-      el.style.transitionDelay = `${Math.min(i * 80, 480)}ms`;
-    });
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach(e => {
+          if (e.isIntersecting) {
+            e.target.classList.add("in-view");
+            io.unobserve(e.target);
+          }
+        });
+      }, { threshold: 0.15 });
 
-    const io = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('in-view');
-          io.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.12 });
-
-    revealEls.forEach(el => io.observe(el));
+      els.forEach(el => io.observe(el));
+    })();
   </script>
 </body>
 </html>
-
-
-
-
-
