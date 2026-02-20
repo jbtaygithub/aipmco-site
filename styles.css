@@ -639,3 +639,50 @@ input[type="email"]:focus{
 #contact.section--dark .panel p{
   color: var(--navyMuted);
 }
+
+/* ========================================= */
+/* Mobile refresh for WIM image sections      */
+/* ========================================= */
+
+@media (max-width: 980px){
+  /* tighten vertical rhythm globally a bit */
+  .section{ padding: 44px 0; }
+  .section__head{ margin-bottom: 14px; }
+  .section__head h2{ font-size: 24px; }
+}
+
+@media (max-width: 640px){
+  /* tighter sections on phones */
+  .section{ padding: 34px 0; }
+  .section__head{ margin-bottom: 10px; }
+  .section__head h2{ font-size: 22px; }
+
+  /* WIM image cards: reduce padding + keep it from feeling huge */
+  .wim__imgwrap{
+    padding: 8px;
+    border-radius: 14px;
+  }
+  .wim__imgwrap img{
+    border-radius: 10px;
+  }
+
+  /* Constrain WIM image height on phones */
+  .wim__imgwrap img{
+    max-height: 62vh;          /* prevents full-page takeover */
+    object-fit: contain;       /* keeps whole image visible */
+  }
+
+  /* Keep the crop, but slightly less aggressive on phones
+     (cropping can make the visible area look "zoomed" on small screens) */
+  .wim__imgwrap--crop50{
+    --cropTop: 4%;
+    --cropBottom: 4%;
+  }
+}
+
+/* Very small phones */
+@media (max-width: 420px){
+  .wim__imgwrap img{
+    max-height: 56vh;
+  }
+}
