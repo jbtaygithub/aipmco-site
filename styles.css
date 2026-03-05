@@ -686,3 +686,18 @@ input[type="email"]:focus{
     max-height: 56vh;
   }
 }
+
+
+
+/* Target audience statement */
+.audience-tag {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--blue2);
+  background: rgba(31, 111, 235, 0.07);
+  border: 1px solid rgba(31, 111, 235, 0.18);
+  border-radius: 8px;
+  padding: 8px 12px;
+  display: inline-block;
+  margin: 0 0 18px;
+}
