@@ -218,7 +218,7 @@ img {
 .hero h1 {
   margin: 0;
   max-width: 12ch;
-  font-size: clamp(2.64rem, 6.4vw, 5.36rem);
+  font-size: clamp(2.112rem, 5.12vw, 4.288rem);
   line-height: 0.96;
   letter-spacing: -0.055em;
   text-transform: uppercase;
@@ -406,6 +406,7 @@ img {
   font-family: "IBM Plex Mono", Consolas, monospace;
   font-size: 0.8rem;
   text-transform: uppercase;
+  color: var(--accent);
   border-left: 1px solid var(--line);
 }
 
