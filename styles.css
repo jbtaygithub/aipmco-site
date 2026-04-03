@@ -687,7 +687,8 @@ img {
 .contact-card {
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 10px;
+  padding: 18px;
 }
 
 .section--dark .contact-card p,
