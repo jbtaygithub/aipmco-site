@@ -462,6 +462,13 @@ img {
 .section__head .eyebrow,
 .story-block__copy .eyebrow,
 .cta__copy .eyebrow,
+.hero__copy .eyebrow {
+  color: var(--accent);
+}
+
+.section__head .eyebrow,
+.story-block__copy .eyebrow,
+.cta__copy .eyebrow,
 .brand__copy .eyebrow {
   margin: 0 0 18px;
 }
