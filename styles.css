@@ -342,7 +342,7 @@ img {
 }
 
 .hero-panel__label {
-  color: var(--ink-faint);
+  color: var(--accent);
   margin-bottom: 16px;
 }
 
@@ -531,7 +531,7 @@ img {
 .framework-card__label,
 .service-card__label,
 .contact-card__label {
-  color: var(--ink-faint);
+  color: var(--accent);
   margin-bottom: 34px;
 }
 
