@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap"
     rel="stylesheet"
   />
   <link rel="stylesheet" href="/styles.css" />
@@ -23,82 +23,183 @@
         <a class="brand" href="#top" aria-label="AI Powered Projects">
           <img class="brand__logo" src="/assets/logo.png" alt="AI Powered Projects logo" />
           <div class="brand__copy">
-            <span class="eyebrow">AI PM Co.</span>
+            <span class="eyebrow">AI.PM.CO &middot; LEHI, UT</span>
             <span class="brand__title">AI Powered Projects</span>
           </div>
         </a>
         <nav class="nav" aria-label="Primary">
-          <a href="/assets/pitch-deck.pdf" target="_blank" rel="noopener">Pitch Deck</a>
-          <a href="#services">Services</a>
-          <a href="#framework">Framework</a>
-          <a href="#wim">WIM</a>
-          <a href="#scorecard">Scorecard</a>
-          <a href="#contact">Contact</a>
+          <a href="/assets/pitch-deck.pdf" target="_blank" rel="noopener" data-num="00">Pitch Deck</a>
+          <a href="#services" data-num="05">Services</a>
+          <a href="#framework" data-num="03">Framework</a>
+          <a href="#wim" data-num="04">WIM</a>
+          <a href="#scorecard" data-num="06">Scorecard</a>
+          <a href="#contact" data-num="07">Contact</a>
         </nav>
         <a class="header__cta" href="https://calendly.com/aipmco" target="_blank" rel="noopener">Book a Fit Check</a>
       </div>
     </header>
 
     <main>
+      <!-- ============= SHEET 01 / HERO ============= -->
       <section class="hero">
-        <div class="container hero__inner">
-          <div class="hero__copy reveal">
-            <div class="hero__meta">
-              <span>Systems-first AI delivery</span>
-            </div>
-            <p class="eyebrow">Practical AI for smarter project delivery</p>
-            <h1>AI-enabled delivery starts with fixing the system, not buying another tool.</h1>
-            <p class="lede">
-              We help teams deliver faster and smarter with practical, systems-first, tool-agnostic AI-enabled workflows that actually stick.
-            </p>
-            <p class="hero__audience">
-              Built for PMOs, delivery leads, and project-driven teams ready to implement AI the right way.
-            </p>
+        <div class="container">
+          <div class="drawing-rule reveal">
+            <span>SHEET 01 / HERO</span>
+            <span>REV. A &middot; 2026-04-16</span>
+            <span>DRAWN BY: J. TAYLOR</span>
           </div>
 
-          <aside class="hero__rail reveal">
-            <div class="hero-panel">
-              <div class="hero-panel__label">Our process</div>
-              <div class="hero-panel__terminal">
-                <span>01</span>
-                <p>Map the real workflow, not the ideal one.</p>
-                <span>02</span>
-                <p>Clarify decision rights and output contracts.</p>
-                <span>03</span>
-                <p>Pick a pilot that reduces admin and speeds delivery.</p>
+          <div class="hero__inner">
+            <div class="hero__copy reveal">
+              <span class="eyebrow">01.1 &middot; Practical AI for smarter project delivery</span>
+              <h1>AI-enabled delivery starts with <strong>fixing the system</strong>, not buying another tool.</h1>
+              <p class="hero__lede">
+                We help teams deliver faster and smarter with practical, systems-first, tool-agnostic AI-enabled workflows that actually stick.
+              </p>
+              <p class="hero__audience">
+                Built for PMOs, delivery leads, and project-driven teams ready to implement AI the right way.
+              </p>
+              <dl class="hero__specsheet">
+                <dt>For</dt>
+                <dd>PMOs &middot; Delivery leads &middot; Project-driven teams</dd>
+                <dt>Lead</dt>
+                <dd>Jason Taylor, PMP &middot; SSBB &middot; PSM</dd>
+                <dt>Method</dt>
+                <dd>Systems-first &middot; Tool-agnostic &middot; Pilot-driven</dd>
+              </dl>
+              <div class="actions">
+                <a class="btn btn--primary" href="https://calendly.com/aipmco" target="_blank" rel="noopener">Book a Fit Check</a>
+                <a class="btn btn--secondary" href="#services">See the 3-Day Workshop &rarr;</a>
               </div>
-              <a class="textlink" href="#services">See the 3-Day Workshop</a>
             </div>
-            <div class="hero-panel hero-panel--image">
-              <div class="hero-panel__label">Workflow Intelligence Map</div>
-              <button class="image-trigger" type="button" data-image-src="/assets/wim-03.png" data-image-alt="Workflow Intelligence Map interface">
-                <img src="/assets/wim-03.png" alt="Workflow Intelligence Map interface" loading="eager" />
-              </button>
+
+            <div class="workflow-stage reveal">
+              <div class="workflow-stage__header">
+                <span><strong>WF-001</strong> &middot; Baseline workflow</span>
+                <span>Scale 1:1</span>
+              </div>
+
+              <svg class="workflow-animation" viewBox="0 0 720 260" xmlns="http://www.w3.org/2000/svg" aria-label="Animated workflow with AI module">
+                <defs>
+                  <marker id="arrowC" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+                    <path d="M 0 0 L 10 5 L 0 10 z" fill="#1c1c1e" />
+                  </marker>
+                  <marker id="arrowBlue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+                    <path d="M 0 0 L 10 5 L 0 10 z" fill="#1e4e8c" />
+                  </marker>
+                </defs>
+
+                <!-- Registration marks -->
+                <g stroke="#1e4e8c" stroke-width="1" opacity="0.5">
+                  <line x1="20" y1="40" x2="32" y2="40" />
+                  <line x1="20" y1="40" x2="20" y2="52" />
+                  <line x1="700" y1="40" x2="688" y2="40" />
+                  <line x1="700" y1="40" x2="700" y2="52" />
+                  <line x1="20" y1="230" x2="32" y2="230" />
+                  <line x1="20" y1="230" x2="20" y2="218" />
+                  <line x1="700" y1="230" x2="688" y2="230" />
+                  <line x1="700" y1="230" x2="700" y2="218" />
+                </g>
+
+                <!-- Dimension line -->
+                <g class="wf-dim" stroke="#1e4e8c" stroke-width="0.8">
+                  <line x1="40" y1="132" x2="626" y2="132" stroke-dasharray="2 3" />
+                  <line x1="40" y1="126" x2="40" y2="138" />
+                  <line x1="626" y1="126" x2="626" y2="138" />
+                  <text x="333" y="127" text-anchor="middle" font-family="JetBrains Mono" font-size="10" fill="#1e4e8c" font-weight="500">5 STEPS &middot; 7.2d AVG CYCLE</text>
+                </g>
+
+                <!-- Arrows -->
+                <g stroke="#1c1c1e" stroke-width="1.5" fill="none">
+                  <line class="wf-arrow a1" x1="138" y1="170" x2="172" y2="170" marker-end="url(#arrowC)" />
+                  <line class="wf-arrow a2" x1="260" y1="170" x2="294" y2="170" marker-end="url(#arrowC)" />
+                  <line class="wf-arrow a3" x1="382" y1="170" x2="416" y2="170" marker-end="url(#arrowC)" />
+                  <line class="wf-arrow a4" x1="504" y1="170" x2="538" y2="170" marker-end="url(#arrowC)" />
+                </g>
+
+                <!-- Blocks -->
+                <g class="wf-block b1">
+                  <rect x="40" y="148" width="98" height="44" fill="#f7f3eb" stroke="#1c1c1e" stroke-width="1.2" />
+                  <text x="89" y="170" text-anchor="middle" font-family="Inter" font-size="11" fill="#1c1c1e" font-weight="500">Intake</text>
+                  <text x="89" y="184" text-anchor="middle" font-family="JetBrains Mono" font-size="8" fill="#1e4e8c">S-01</text>
+                </g>
+                <g class="wf-block b2 mark">
+                  <rect x="162" y="148" width="98" height="44" fill="#f7f3eb" stroke="#1c1c1e" stroke-width="1.2" />
+                  <text x="211" y="170" text-anchor="middle" font-family="Inter" font-size="11" fill="#1c1c1e" font-weight="500">Triage</text>
+                  <text x="211" y="184" text-anchor="middle" font-family="JetBrains Mono" font-size="8" fill="#1e4e8c">S-02</text>
+                </g>
+                <g class="wf-block b3 mark">
+                  <rect x="284" y="148" width="98" height="44" fill="#f7f3eb" stroke="#1c1c1e" stroke-width="1.2" />
+                  <text x="333" y="170" text-anchor="middle" font-family="Inter" font-size="11" fill="#1c1c1e" font-weight="500">Review</text>
+                  <text x="333" y="184" text-anchor="middle" font-family="JetBrains Mono" font-size="8" fill="#1e4e8c">S-03</text>
+                </g>
+                <g class="wf-block b4 mark">
+                  <rect x="406" y="148" width="98" height="44" fill="#f7f3eb" stroke="#1c1c1e" stroke-width="1.2" />
+                  <text x="455" y="170" text-anchor="middle" font-family="Inter" font-size="11" fill="#1c1c1e" font-weight="500">Approve</text>
+                  <text x="455" y="184" text-anchor="middle" font-family="JetBrains Mono" font-size="8" fill="#1e4e8c">S-04</text>
+                </g>
+                <g class="wf-block b5">
+                  <rect x="528" y="148" width="98" height="44" fill="#f7f3eb" stroke="#1c1c1e" stroke-width="1.2" />
+                  <text x="577" y="170" text-anchor="middle" font-family="Inter" font-size="11" fill="#1c1c1e" font-weight="500">Archive</text>
+                  <text x="577" y="184" text-anchor="middle" font-family="JetBrains Mono" font-size="8" fill="#1e4e8c">S-05</text>
+                </g>
+
+                <!-- AI module -->
+                <g class="wf-ai">
+                  <rect x="243" y="56" width="180" height="48" fill="#1e4e8c" stroke="#143966" stroke-width="1.2" />
+                  <circle cx="267" cy="80" r="5" fill="#f7f3eb" />
+                  <circle cx="267" cy="80" r="2" fill="#1e4e8c" />
+                  <text x="345" y="78" text-anchor="middle" font-family="Inter" font-size="12" fill="#f7f3eb" font-weight="500">AI Module</text>
+                  <text x="345" y="94" text-anchor="middle" font-family="JetBrains Mono" font-size="8" fill="#f7f3eb" opacity="0.8">M-01 &middot; CLASSIFY+ROUTE</text>
+                </g>
+
+                <!-- Beams -->
+                <g stroke="#1e4e8c" stroke-width="1.5" stroke-dasharray="3 3" fill="none">
+                  <line class="wf-beam m1" x1="288" y1="104" x2="211" y2="148" />
+                  <line class="wf-beam m2" x1="333" y1="104" x2="333" y2="148" />
+                  <line class="wf-beam m3" x1="378" y1="104" x2="455" y2="148" />
+                </g>
+              </svg>
+
+              <div class="workflow-stage__footer">
+                <span>FIG. 01.1 &mdash; AI-AUGMENTED FLOW</span>
+                <span>LOOP &middot; 10s</span>
+              </div>
             </div>
-          </aside>
+          </div>
         </div>
       </section>
 
-      <section class="section section--contrast" id="problem">
+      <!-- ============= SHEET 02 / PROBLEM ============= -->
+      <section class="section section--panel" id="problem">
         <div class="container">
+          <div class="drawing-rule reveal">
+            <span>SHEET 02 / PROBLEM</span>
+            <span>FAILURE MODES</span>
+            <span>REV. A</span>
+          </div>
+
           <div class="section__head reveal">
-            <p class="eyebrow">Why AI efforts stall in delivery</p>
-            <h2>Most teams add AI on top of broken delivery systems. The result is faster documentation of the same problems.</h2>
+            <div class="section__index">
+              02 &middot; PROBLEM
+              <strong>Why AI stalls</strong>
+            </div>
+            <h2>Most teams add AI on top of <strong>broken delivery systems</strong>. The result is faster documentation of the same problems.</h2>
           </div>
 
           <div class="compare reveal">
             <article class="compare__panel">
-              <div class="compare__label">01</div>
+              <div class="compare__meta">02.1 &middot; Failure mode</div>
               <h3>AI layered on top of broken workflows</h3>
               <p>Without workflow clarity, AI amplifies inconsistency and rework.</p>
             </article>
             <article class="compare__panel">
-              <div class="compare__label">02</div>
+              <div class="compare__meta">02.2 &middot; Failure mode</div>
               <h3>Decision latency and unclear ownership</h3>
               <p>If inputs and decision rights are not explicit, delivery slows. AI cannot fix that.</p>
             </article>
             <article class="compare__panel">
-              <div class="compare__label">03</div>
+              <div class="compare__meta">02.3 &middot; Failure mode</div>
               <h3>PMs drowning in status while delivery slips anyway</h3>
               <p>Tooling helps document the drift. Systems thinking prevents it.</p>
             </article>
@@ -106,138 +207,238 @@
         </div>
       </section>
 
+      <!-- ============= SHEET 03 / FRAMEWORK ============= -->
       <section class="section" id="framework">
         <div class="container">
+          <div class="drawing-rule reveal">
+            <span>SHEET 03 / FRAMEWORK</span>
+            <span>METHOD &middot; 4 STEPS</span>
+            <span>REV. A</span>
+          </div>
+
           <div class="section__head reveal">
-            <p class="eyebrow">Our framework</p>
-            <h2>A practical, structured path from assessment to measurable improvement.</h2>
+            <div class="section__index">
+              03 &middot; FRAMEWORK
+              <strong>From assessment to impact</strong>
+            </div>
+            <h2>A practical, structured path from assessment to <strong>measurable improvement</strong>.</h2>
           </div>
 
           <div class="framework-grid reveal">
             <article class="framework-card">
-              <div class="framework-card__label">Understand</div>
+              <div class="framework-card__meta">03.1 &middot; STEP</div>
+              <h3 class="framework-card__title">Understand</h3>
               <p>Map workflows, constraints, and decision rights. Identify bottlenecks and failure modes.</p>
             </article>
             <article class="framework-card">
-              <div class="framework-card__label">Identify</div>
+              <div class="framework-card__meta">03.2 &middot; STEP</div>
+              <h3 class="framework-card__title">Identify</h3>
               <p>Build a prioritized AI opportunity backlog tied to real outcomes, impact, effort, and risk.</p>
             </article>
             <article class="framework-card">
-              <div class="framework-card__label">Implement</div>
+              <div class="framework-card__meta">03.3 &middot; STEP</div>
+              <h3 class="framework-card__title">Implement</h3>
               <p>Pilot guarded workflows with templates, prompts, and verification, then iterate.</p>
             </article>
             <article class="framework-card">
-              <div class="framework-card__label">Improve</div>
+              <div class="framework-card__meta">03.4 &middot; STEP</div>
+              <h3 class="framework-card__title">Improve</h3>
               <p>Measure results, tune patterns, and scale with governance and enablement.</p>
             </article>
           </div>
         </div>
       </section>
 
+      <!-- ============= SHEET 04 / WIM &mdash; overview ============= -->
       <section class="section section--dark" id="wim">
-        <div class="container story-block story-block--reverse">
-          <div class="story-block__copy reveal">
-            <p class="eyebrow">Workflow Intelligence Map (WIM)</p>
-            <h2>Our purpose-built tool combines three proven methodologies to give your team a structured, AI-powered path from workflow chaos to measurable improvement.</h2>
-          </div>
-          <div class="story-block__media reveal">
-            <div class="image-frame">
-              <button class="image-trigger" type="button" data-image-src="/assets/wim-01.png" data-image-alt="Workflow Intelligence Map overview">
-                <img src="/assets/wim-01.png" alt="Workflow Intelligence Map overview" loading="lazy" />
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="section" id="wim-how">
-        <div class="container story-block">
-          <div class="story-block__copy reveal">
-            <p class="eyebrow">How WIM works</p>
-            <h2>Five guided steps take you from a blank canvas to a prioritized AI pilot recommendation.</h2>
-            <div class="story-points">
-              <div>Structured workflow mapping</div>
-              <div>SIPOC-driven context capture</div>
-              <div>AI-assisted classification</div>
-              <div>Prioritized pilot ranking</div>
-            </div>
-          </div>
-          <div class="story-block__media reveal">
-            <div class="image-frame image-frame--light">
-              <button class="image-trigger" type="button" data-image-src="/assets/wim-02.png" data-image-alt="WIM five-step process">
-                <img src="/assets/wim-02.png" alt="WIM five-step process" loading="lazy" />
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="section section--contrast" id="wim-tool">
-        <div class="container story-block story-block--reverse">
-          <div class="story-block__copy reveal">
-            <p class="eyebrow">The tool in action</p>
-            <h2>Map your workflows visually, add SIPOC detail, and let AI classify each step and surface opportunities.</h2>
-          </div>
-          <div class="story-block__media reveal">
-            <div class="image-frame image-frame--dark">
-              <button class="image-trigger" type="button" data-image-src="/assets/wim-03.png" data-image-alt="WIM tool interface screenshot">
-                <img src="/assets/wim-03.png" alt="WIM tool interface screenshot" loading="lazy" />
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="section section--dark" id="ai-capabilities">
-        <div class="container story-block">
-          <div class="story-block__copy reveal">
-            <p class="eyebrow">AI capabilities inside WIM</p>
-            <h2>WIM recommends pilots across the full range of AI capabilities, from generative AI to RPA, matched to your specific workflow context.</h2>
-          </div>
-          <div class="story-block__media reveal">
-            <div class="image-frame">
-              <button class="image-trigger" type="button" data-image-src="/assets/wim-04.png" data-image-alt="AI capabilities in WIM">
-                <img src="/assets/wim-04.png" alt="AI capabilities in WIM" loading="lazy" />
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="section" id="wim-outputs">
-        <div class="container story-block story-block--reverse">
-          <div class="story-block__copy reveal">
-            <p class="eyebrow">What WIM produces</p>
-            <h2>Every session ends with concrete, prioritized recommendations. Not a list of possibilities, but a ranked pilot plan tied to your real constraints.</h2>
-          </div>
-          <div class="story-block__media reveal">
-            <div class="image-frame image-frame--light">
-              <button class="image-trigger" type="button" data-image-src="/assets/wim-05.png" data-image-alt="WIM outputs and recommendations">
-                <img src="/assets/wim-05.png" alt="WIM outputs and recommendations" loading="lazy" />
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="section section--contrast" id="services">
         <div class="container">
+          <div class="drawing-rule reveal">
+            <span>SHEET 04 / WIM</span>
+            <span>TOOL &middot; OVERVIEW</span>
+            <span>REV. A</span>
+          </div>
+
+          <div class="story story--reverse">
+            <div class="story__copy reveal">
+              <span class="eyebrow">04.1 &middot; Workflow Intelligence Map</span>
+              <h2>A purpose-built tool that gives your team a <strong>structured, AI-powered path</strong> from workflow chaos to measurable improvement.</h2>
+              <p class="story__lede">
+                WIM combines three proven methodologies &mdash; workflow mapping, SIPOC, and AI capability classification &mdash; into one guided experience.
+              </p>
+              <dl class="story__specs">
+                <dt>Methods</dt>
+                <dd>Mapping &middot; SIPOC &middot; AI classification</dd>
+                <dt>Output</dt>
+                <dd>Ranked pilot plan with success metrics</dd>
+                <dt>Format</dt>
+                <dd>Guided session, 5 steps</dd>
+              </dl>
+            </div>
+            <div class="story__media reveal">
+              <figure class="story__drawing">
+                <button class="image-trigger" type="button" data-image-src="/assets/wim-01.png" data-image-alt="Workflow Intelligence Map overview">
+                  <img src="/assets/wim-01.png" alt="Workflow Intelligence Map overview" loading="lazy" />
+                </button>
+                <figcaption class="story__drawing-footer">
+                  <span><strong>FIG. 04.1</strong> &middot; WIM OVERVIEW</span>
+                  <span>SHEET 04 / 01</span>
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============= SHEET 04 / WIM &mdash; how it works ============= -->
+      <section class="section" id="wim-how">
+        <div class="container">
+          <div class="drawing-rule reveal">
+            <span>SHEET 04.2 / WIM</span>
+            <span>FIVE GUIDED STEPS</span>
+            <span>REV. A</span>
+          </div>
+
+          <div class="story">
+            <div class="story__copy reveal">
+              <span class="eyebrow">04.2 &middot; How WIM works</span>
+              <h2>Five guided steps take you from a blank canvas to a <strong>prioritized AI pilot recommendation</strong>.</h2>
+              <div class="story__points">
+                <div>Structured workflow mapping</div>
+                <div>SIPOC-driven context capture</div>
+                <div>AI-assisted classification</div>
+                <div>Prioritized pilot ranking</div>
+              </div>
+            </div>
+            <div class="story__media reveal">
+              <figure class="story__drawing">
+                <button class="image-trigger" type="button" data-image-src="/assets/wim-02.png" data-image-alt="WIM five-step process">
+                  <img src="/assets/wim-02.png" alt="WIM five-step process" loading="lazy" />
+                </button>
+                <figcaption class="story__drawing-footer">
+                  <span><strong>FIG. 04.2</strong> &middot; FIVE-STEP PROCESS</span>
+                  <span>SHEET 04 / 02</span>
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============= SHEET 04 / WIM &mdash; tool in action ============= -->
+      <section class="section section--panel" id="wim-tool">
+        <div class="container">
+          <div class="drawing-rule reveal">
+            <span>SHEET 04.3 / WIM</span>
+            <span>INTERFACE &middot; IN USE</span>
+            <span>REV. A</span>
+          </div>
+
+          <div class="story story--reverse">
+            <div class="story__copy reveal">
+              <span class="eyebrow">04.3 &middot; The tool in action</span>
+              <h2>Map workflows visually, add SIPOC detail, and let AI classify each step to <strong>surface opportunities</strong>.</h2>
+            </div>
+            <div class="story__media reveal">
+              <figure class="story__drawing">
+                <button class="image-trigger" type="button" data-image-src="/assets/wim-03.png" data-image-alt="WIM tool interface screenshot">
+                  <img src="/assets/wim-03.png" alt="WIM tool interface screenshot" loading="lazy" />
+                </button>
+                <figcaption class="story__drawing-footer">
+                  <span><strong>FIG. 04.3</strong> &middot; WIM INTERFACE</span>
+                  <span>SHEET 04 / 03</span>
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============= SHEET 04 / WIM &mdash; AI capabilities ============= -->
+      <section class="section section--dark" id="ai-capabilities">
+        <div class="container">
+          <div class="drawing-rule reveal">
+            <span>SHEET 04.4 / WIM</span>
+            <span>CAPABILITY COVERAGE</span>
+            <span>REV. A</span>
+          </div>
+
+          <div class="story">
+            <div class="story__copy reveal">
+              <span class="eyebrow">04.4 &middot; AI capabilities inside WIM</span>
+              <h2>Pilot recommendations span the full range of AI capabilities &mdash; from <strong>generative AI to RPA</strong> &mdash; matched to your workflow context.</h2>
+            </div>
+            <div class="story__media reveal">
+              <figure class="story__drawing">
+                <button class="image-trigger" type="button" data-image-src="/assets/wim-04.png" data-image-alt="AI capabilities in WIM">
+                  <img src="/assets/wim-04.png" alt="AI capabilities in WIM" loading="lazy" />
+                </button>
+                <figcaption class="story__drawing-footer">
+                  <span><strong>FIG. 04.4</strong> &middot; CAPABILITY MATRIX</span>
+                  <span>SHEET 04 / 04</span>
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============= SHEET 04 / WIM &mdash; outputs ============= -->
+      <section class="section" id="wim-outputs">
+        <div class="container">
+          <div class="drawing-rule reveal">
+            <span>SHEET 04.5 / WIM</span>
+            <span>OUTPUTS &middot; RANKED PILOT PLAN</span>
+            <span>REV. A</span>
+          </div>
+
+          <div class="story story--reverse">
+            <div class="story__copy reveal">
+              <span class="eyebrow">04.5 &middot; What WIM produces</span>
+              <h2>Every session ends with concrete, prioritized recommendations. Not a list of possibilities &mdash; a <strong>ranked pilot plan</strong> tied to your real constraints.</h2>
+            </div>
+            <div class="story__media reveal">
+              <figure class="story__drawing">
+                <button class="image-trigger" type="button" data-image-src="/assets/wim-05.png" data-image-alt="WIM outputs and recommendations">
+                  <img src="/assets/wim-05.png" alt="WIM outputs and recommendations" loading="lazy" />
+                </button>
+                <figcaption class="story__drawing-footer">
+                  <span><strong>FIG. 04.5</strong> &middot; RANKED OUTPUTS</span>
+                  <span>SHEET 04 / 05</span>
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============= SHEET 05 / SERVICES ============= -->
+      <section class="section section--panel" id="services">
+        <div class="container">
+          <div class="drawing-rule reveal">
+            <span>SHEET 05 / SERVICES</span>
+            <span>ENGAGEMENT &middot; 3-DAY</span>
+            <span>REV. A</span>
+          </div>
+
           <div class="section__head reveal">
-            <p class="eyebrow">Services</p>
-            <h2>Start with a focused engagement designed to produce clarity and momentum.</h2>
+            <div class="section__index">
+              05 &middot; SERVICES
+              <strong>Focused engagement</strong>
+            </div>
+            <h2>Start with a focused engagement designed to produce <strong>clarity and momentum</strong>.</h2>
           </div>
 
           <div class="service-layout reveal">
-            <article class="service-card service-card--main">
-              <div class="service-card__label">Workshop</div>
+            <article class="service-card">
+              <div class="service-card__meta">05.1 &middot; WORKSHOP</div>
               <h3>3-Day AI-Powered Delivery Workshop</h3>
               <p>
-                A practical, hands-on workshop that provides a clear foundation for AI adoption, grounded in systems thinking, workflow clarity, and a structured method for selecting and implementing an AI pilot. Includes hands-on use of the WIM tool, plus continued access after the workshop.
+                A practical, hands-on workshop that provides a clear foundation for AI adoption &mdash; grounded in systems thinking, workflow clarity, and a structured method for selecting and implementing an AI pilot. Includes hands-on use of the WIM tool, plus continued access after the workshop.
               </p>
               <div class="timeline">
-                <div>Day 1: PM Core + Workflow Mapping</div>
-                <div>Day 2: AI intro + the AI/PM Framework</div>
-                <div>Day 3: Hands-on Workflow Redesign + AI Pilot Selection</div>
+                <div data-step="DAY 1">PM Core + Workflow Mapping</div>
+                <div data-step="DAY 2">AI intro + the AI/PM Framework</div>
+                <div data-step="DAY 3">Hands-on Workflow Redesign + AI Pilot Selection</div>
               </div>
               <div class="actions">
                 <a class="btn btn--primary" href="https://calendly.com/aipmco" target="_blank" rel="noopener">Book a Fit Check</a>
@@ -246,8 +447,8 @@
               </div>
             </article>
 
-            <aside class="service-card service-card--aside">
-              <div class="service-card__label">Outcomes</div>
+            <aside class="service-card">
+              <div class="service-card__meta">05.2 &middot; OUTCOMES</div>
               <h3>What you'll walk away with</h3>
               <ul class="outcomes">
                 <li>Workflow map, bottlenecks, and constraints</li>
@@ -266,11 +467,18 @@
         </div>
       </section>
 
+      <!-- ============= SHEET 06 / SCORECARD ============= -->
       <section class="section" id="scorecard">
         <div class="container">
+          <div class="drawing-rule reveal">
+            <span>SHEET 06 / SCORECARD</span>
+            <span>DIAGNOSTIC &middot; 2 MIN</span>
+            <span>REV. A</span>
+          </div>
+
           <div class="cta reveal">
             <div class="cta__copy">
-              <p class="eyebrow">Readiness scorecard</p>
+              <span class="eyebrow">06.1 &middot; Readiness scorecard</span>
               <h2>Get the AI-in-Delivery Readiness Scorecard</h2>
               <p>
                 A short diagnostic to identify what is broken before you implement AI, plus the highest-leverage starting points.
@@ -291,26 +499,36 @@
         </div>
       </section>
 
+      <!-- ============= SHEET 07 / CONTACT ============= -->
       <section class="section section--dark" id="contact">
         <div class="container">
+          <div class="drawing-rule reveal">
+            <span>SHEET 07 / CONTACT</span>
+            <span>START THE CONVERSATION</span>
+            <span>REV. A</span>
+          </div>
+
           <div class="section__head reveal">
-            <p class="eyebrow">Contact</p>
-            <h2>Book a call, email us, or connect on LinkedIn.</h2>
+            <div class="section__index">
+              07 &middot; CONTACT
+              <strong>Start the conversation</strong>
+            </div>
+            <h2>Book a call, email us, or connect on <strong>LinkedIn</strong>.</h2>
           </div>
 
           <div class="contact-grid reveal">
             <article class="contact-card">
-              <div class="contact-card__label">Book a call</div>
+              <div class="contact-card__meta">07.1 &middot; CALL</div>
               <p>Use Calendly to grab a time that works.</p>
               <a class="btn btn--ghost" href="https://calendly.com/aipmco" target="_blank" rel="noopener">Book via Calendly</a>
             </article>
             <article class="contact-card">
-              <div class="contact-card__label">Email</div>
+              <div class="contact-card__meta">07.2 &middot; EMAIL</div>
               <p>Tell us what you're trying to improve and your timeline.</p>
               <a class="textlink textlink--light" href="mailto:contact@aipmco.com">contact@aipmco.com</a>
             </article>
             <article class="contact-card">
-              <div class="contact-card__label">LinkedIn</div>
+              <div class="contact-card__meta">07.3 &middot; LINKEDIN</div>
               <p>Follow the page for practical workflows and templates.</p>
               <a
                 class="btn btn--ghost"
@@ -336,7 +554,7 @@
             <a href="https://www.linkedin.com/company/ai-powered-projects-consulting-llc" target="_blank" rel="noopener">LinkedIn</a>
           </div>
         </div>
-        <a class="textlink" href="#top">Back to top</a>
+        <a class="textlink" href="#top">Back to top &uarr;</a>
       </div>
     </footer>
   </div>

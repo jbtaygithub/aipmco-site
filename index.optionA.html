@@ -1,0 +1,620 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Option A — Premium Craft Consulting | AI Powered Projects</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=Inter:wght@300;400;500;600&display=swap"
+    rel="stylesheet"
+  />
+  <style>
+    /* ============== Option A — Premium Craft Consulting ============== */
+    :root {
+      --bg: #faf8f2;               /* warm off-white */
+      --bg-2: #f3efe5;             /* warmer panel */
+      --ink: #0f1419;              /* deep charcoal */
+      --ink-soft: rgba(15, 20, 25, 0.72);
+      --ink-faint: rgba(15, 20, 25, 0.55);
+      --rule: rgba(15, 20, 25, 0.14);
+      --rule-strong: rgba(15, 20, 25, 0.28);
+      --accent: #0a6e6e;           /* deep teal signature */
+      --accent-soft: rgba(10, 110, 110, 0.10);
+      --accent-ink: #054545;
+      --gold: #8a6b2e;             /* warm secondary accent */
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    html, body { margin: 0; padding: 0; }
+
+    body {
+      background: var(--bg);
+      color: var(--ink);
+      font-family: "Inter", "Segoe UI", system-ui, sans-serif;
+      font-size: 17px;
+      line-height: 1.55;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+
+    .container {
+      width: min(1240px, calc(100% - 64px));
+      margin: 0 auto;
+    }
+
+    /* ============== Header ============== */
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 40;
+      background: rgba(250, 248, 242, 0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--rule);
+    }
+    .header__inner {
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      gap: 32px;
+      align-items: center;
+      min-height: 80px;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .brand__logo {
+      width: 44px;
+      height: 44px;
+      border-radius: 4px;
+      box-shadow: 0 0 0 1px var(--rule);
+    }
+    .brand__title {
+      font-family: "Fraunces", Georgia, serif;
+      font-size: 1.15rem;
+      font-weight: 500;
+      letter-spacing: -0.01em;
+      line-height: 1.1;
+    }
+    .brand__kicker {
+      font-family: "Inter", sans-serif;
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--ink-faint);
+    }
+    .nav {
+      display: flex;
+      gap: 28px;
+      justify-content: center;
+      font-size: 0.92rem;
+      color: var(--ink-soft);
+    }
+    .nav a { transition: color 0.18s ease; }
+    .nav a:hover { color: var(--accent); }
+    .header__cta {
+      font-family: "Inter", sans-serif;
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: var(--bg);
+      background: var(--ink);
+      padding: 12px 22px;
+      border-radius: 6px;
+      transition: background 0.18s ease;
+    }
+    .header__cta:hover { background: var(--accent); }
+
+    /* ============== Hero ============== */
+    .hero {
+      padding: 96px 0 72px;
+      position: relative;
+    }
+    .hero__inner {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(440px, 0.8fr);
+      gap: 72px;
+      align-items: center;
+    }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-family: "Inter", sans-serif;
+      font-size: 0.78rem;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 28px;
+    }
+    .eyebrow::before {
+      content: "";
+      width: 28px;
+      height: 1px;
+      background: var(--accent);
+    }
+    .hero h1 {
+      font-family: "Fraunces", Georgia, serif;
+      font-size: clamp(2.8rem, 5.6vw, 4.6rem);
+      font-weight: 400;
+      line-height: 1.08;
+      letter-spacing: -0.022em;
+      margin: 0;
+      color: var(--ink);
+      max-width: 18ch;
+    }
+    .hero h1 em {
+      font-style: italic;
+      font-weight: 400;
+      color: var(--accent);
+    }
+    .hero__lede {
+      margin: 32px 0 0;
+      max-width: 52ch;
+      font-size: 1.18rem;
+      line-height: 1.55;
+      color: var(--ink-soft);
+    }
+    .hero__audience {
+      margin: 28px 0 0;
+      padding: 18px 22px;
+      background: var(--accent-soft);
+      border-left: 3px solid var(--accent);
+      max-width: 52ch;
+      font-size: 0.98rem;
+      color: var(--ink-soft);
+    }
+    .hero__credentials {
+      margin: 32px 0 0;
+      padding-top: 24px;
+      border-top: 1px solid var(--rule);
+      font-family: "Inter", sans-serif;
+      font-size: 0.84rem;
+      color: var(--ink-faint);
+      letter-spacing: 0.02em;
+    }
+    .hero__credentials strong {
+      color: var(--ink);
+      font-weight: 500;
+    }
+    .actions {
+      display: flex;
+      gap: 12px;
+      margin: 36px 0 0;
+      flex-wrap: wrap;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 14px 26px;
+      border-radius: 6px;
+      font-family: "Inter", sans-serif;
+      font-size: 0.93rem;
+      font-weight: 500;
+      border: 1px solid transparent;
+      cursor: pointer;
+      transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+    }
+    .btn--primary {
+      background: var(--ink);
+      color: var(--bg);
+    }
+    .btn--primary:hover { background: var(--accent); }
+    .btn--secondary {
+      background: transparent;
+      color: var(--ink);
+      border-color: var(--rule-strong);
+    }
+    .btn--secondary:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+
+    /* ============== Animated Workflow SVG ============== */
+    .workflow-stage {
+      background: var(--bg-2);
+      border: 1px solid var(--rule);
+      border-radius: 10px;
+      padding: 28px 24px;
+      box-shadow: 0 24px 60px rgba(15, 20, 25, 0.08);
+      position: relative;
+    }
+    .workflow-stage__caption {
+      font-family: "Fraunces", Georgia, serif;
+      font-style: italic;
+      font-size: 0.95rem;
+      color: var(--ink-soft);
+      margin: 20px 0 4px;
+      padding-top: 20px;
+      border-top: 1px solid var(--rule);
+      text-align: center;
+    }
+    .workflow-animation { width: 100%; height: auto; display: block; }
+
+    /* Animation — 10s loop telling the story */
+    @keyframes fadeInUp {
+      0%   { opacity: 0; transform: translateY(8px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+    .wf-block { opacity: 0; transform-origin: center; }
+    .wf-arrow { opacity: 0; stroke-dasharray: 30; stroke-dashoffset: 30; }
+    .wf-ai    { opacity: 0; transform: translateY(-20px); transform-origin: center; }
+    .wf-beam  { opacity: 0; }
+
+    /* Each uses a 10s infinite cycle with its own timing */
+    @keyframes blockFade {
+      0%, 2%   { opacity: 0; transform: translateY(8px); }
+      6%, 85%  { opacity: 1; transform: translateY(0); }
+      95%, 100%{ opacity: 0; transform: translateY(0); }
+    }
+    @keyframes arrowDraw {
+      0%, 5%   { opacity: 0; stroke-dashoffset: 30; }
+      9%, 85%  { opacity: 1; stroke-dashoffset: 0; }
+      95%, 100%{ opacity: 0; stroke-dashoffset: 30; }
+    }
+    @keyframes aiDrop {
+      0%, 40%  { opacity: 0; transform: translateY(-20px); }
+      48%, 85% { opacity: 1; transform: translateY(0); }
+      95%,100% { opacity: 0; transform: translateY(-20px); }
+    }
+    @keyframes beamPulse {
+      0%, 48%   { opacity: 0; }
+      52%       { opacity: 0.9; }
+      60%       { opacity: 0.3; }
+      68%       { opacity: 0.9; }
+      76%       { opacity: 0.3; }
+      85%       { opacity: 0.9; }
+      95%,100%  { opacity: 0; }
+    }
+    @keyframes blockGlow {
+      0%, 48%   { filter: none; }
+      60%, 85%  { filter: drop-shadow(0 0 6px rgba(10,110,110,0.5)); }
+      95%,100%  { filter: none; }
+    }
+
+    .wf-block.b1 { animation: blockFade 10s ease infinite; animation-delay: 0s; }
+    .wf-block.b2 { animation: blockFade 10s ease infinite; animation-delay: 0.6s; }
+    .wf-block.b3 { animation: blockFade 10s ease infinite; animation-delay: 1.2s; }
+    .wf-block.b4 { animation: blockFade 10s ease infinite; animation-delay: 1.8s; }
+    .wf-block.b5 { animation: blockFade 10s ease infinite; animation-delay: 2.4s; }
+    .wf-arrow.a1 { animation: arrowDraw 10s ease infinite; animation-delay: 0.3s; }
+    .wf-arrow.a2 { animation: arrowDraw 10s ease infinite; animation-delay: 0.9s; }
+    .wf-arrow.a3 { animation: arrowDraw 10s ease infinite; animation-delay: 1.5s; }
+    .wf-arrow.a4 { animation: arrowDraw 10s ease infinite; animation-delay: 2.1s; }
+    .wf-ai       { animation: aiDrop 10s ease infinite; animation-delay: 0s; }
+    .wf-beam.m1  { animation: beamPulse 10s ease infinite; animation-delay: 0s; }
+    .wf-beam.m2  { animation: beamPulse 10s ease infinite; animation-delay: 0.1s; }
+    .wf-beam.m3  { animation: beamPulse 10s ease infinite; animation-delay: 0.2s; }
+    .wf-block.glow.b2 { animation: blockFade 10s ease infinite, blockGlow 10s ease infinite; animation-delay: 0.6s, 0s; }
+    .wf-block.glow.b3 { animation: blockFade 10s ease infinite, blockGlow 10s ease infinite; animation-delay: 1.2s, 0s; }
+    .wf-block.glow.b4 { animation: blockFade 10s ease infinite, blockGlow 10s ease infinite; animation-delay: 1.8s, 0s; }
+
+    /* ============== Sections ============== */
+    .section { padding: 112px 0; }
+    .section--paper { background: var(--bg-2); border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
+
+    .section__head {
+      display: grid;
+      grid-template-columns: 1fr 1.4fr;
+      gap: 48px;
+      margin-bottom: 64px;
+      align-items: baseline;
+    }
+    .section__head .eyebrow { margin-bottom: 12px; }
+    .section__head h2 {
+      font-family: "Fraunces", Georgia, serif;
+      font-weight: 400;
+      font-size: clamp(1.9rem, 3.8vw, 2.8rem);
+      line-height: 1.15;
+      letter-spacing: -0.015em;
+      margin: 0;
+      color: var(--ink);
+    }
+    .section__head h2 em {
+      font-style: italic;
+      color: var(--accent);
+      font-weight: 400;
+    }
+
+    /* Compare section */
+    .compare {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 32px;
+    }
+    .compare__panel {
+      padding: 36px 28px 32px;
+      background: var(--bg);
+      border: 1px solid var(--rule);
+      border-radius: 6px;
+      position: relative;
+      transition: border-color 0.2s ease, transform 0.2s ease;
+    }
+    .compare__panel:hover {
+      transform: translateY(-2px);
+      border-color: var(--accent);
+    }
+    .compare__num {
+      font-family: "Fraunces", Georgia, serif;
+      font-size: 3rem;
+      font-weight: 300;
+      color: var(--accent);
+      line-height: 1;
+      margin-bottom: 18px;
+      font-style: italic;
+    }
+    .compare__panel h3 {
+      font-family: "Fraunces", Georgia, serif;
+      font-size: 1.28rem;
+      font-weight: 500;
+      line-height: 1.3;
+      letter-spacing: -0.01em;
+      margin: 0 0 12px;
+    }
+    .compare__panel p {
+      margin: 0;
+      color: var(--ink-soft);
+      font-size: 0.98rem;
+      line-height: 1.55;
+    }
+
+    /* Story block (WIM) */
+    .story {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr);
+      gap: 72px;
+      align-items: center;
+    }
+    .story h2 {
+      font-family: "Fraunces", Georgia, serif;
+      font-weight: 400;
+      font-size: clamp(1.9rem, 3.8vw, 2.8rem);
+      line-height: 1.15;
+      letter-spacing: -0.015em;
+      margin: 16px 0 0;
+    }
+    .story h2 em { font-style: italic; color: var(--accent); }
+    .story__lede {
+      margin: 24px 0 0;
+      font-size: 1.1rem;
+      line-height: 1.55;
+      color: var(--ink-soft);
+    }
+    .story__pullquote {
+      margin: 32px 0 0;
+      padding: 20px 0 0 24px;
+      border-left: 2px solid var(--accent);
+      font-family: "Fraunces", Georgia, serif;
+      font-style: italic;
+      font-size: 1.15rem;
+      line-height: 1.45;
+      color: var(--ink);
+    }
+    .story__pullquote cite {
+      display: block;
+      margin-top: 10px;
+      font-style: normal;
+      font-family: "Inter", sans-serif;
+      font-size: 0.82rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--ink-faint);
+    }
+    .story__image {
+      padding: 20px;
+      background: var(--bg-2);
+      border: 1px solid var(--rule);
+      border-radius: 8px;
+      box-shadow: 0 24px 60px rgba(15, 20, 25, 0.08);
+    }
+    .story__image img {
+      width: 100%;
+      border-radius: 4px;
+      border: 1px solid var(--rule);
+    }
+    .story__caption {
+      margin: 18px 0 0;
+      padding-top: 16px;
+      border-top: 1px solid var(--rule);
+      display: flex;
+      justify-content: space-between;
+      font-family: "Inter", sans-serif;
+      font-size: 0.78rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--ink-faint);
+    }
+
+    /* Option label */
+    .option-flag {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      z-index: 100;
+      padding: 10px 18px;
+      border-radius: 999px;
+      background: var(--ink);
+      color: var(--bg);
+      font-family: "Inter", sans-serif;
+      font-size: 0.82rem;
+      font-weight: 500;
+      letter-spacing: 0.05em;
+      box-shadow: 0 8px 24px rgba(15,20,25,0.2);
+    }
+
+    @media (max-width: 1024px) {
+      .hero__inner, .story, .section__head { grid-template-columns: 1fr; gap: 40px; }
+      .compare { grid-template-columns: 1fr; }
+      .nav { display: none; }
+      .section { padding: 80px 0; }
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="container header__inner">
+      <a class="brand" href="#">
+        <img class="brand__logo" src="./assets/logo.png" alt="" />
+        <div>
+          <div class="brand__kicker">AI PM Co.</div>
+          <div class="brand__title">AI Powered Projects</div>
+        </div>
+      </a>
+      <nav class="nav">
+        <a href="#">Services</a>
+        <a href="#">Framework</a>
+        <a href="#">WIM Tool</a>
+        <a href="#">Scorecard</a>
+        <a href="#">Contact</a>
+      </nav>
+      <a class="header__cta" href="#">Book a Fit Check</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero__inner">
+        <div class="hero__copy">
+          <span class="eyebrow">Practical AI for smarter project delivery</span>
+          <h1>AI-enabled delivery starts with <em>fixing the system</em>, not buying another tool.</h1>
+          <p class="hero__lede">
+            We help teams deliver faster and smarter with practical, systems-first, tool-agnostic AI-enabled workflows that actually stick.
+          </p>
+          <div class="hero__audience">
+            Built for PMOs, delivery leads, and project-driven teams ready to implement AI the right way.
+          </div>
+          <div class="actions">
+            <a class="btn btn--primary" href="#">Book a Fit Check</a>
+            <a class="btn btn--secondary" href="#">See the 3-Day Workshop</a>
+          </div>
+          <div class="hero__credentials">
+            <strong>Jason Taylor</strong> · PMP · Six Sigma Black Belt · PSM · AMA Instructor since 2016 · 20+ yrs program leadership
+          </div>
+        </div>
+
+        <div class="workflow-stage">
+          <svg class="workflow-animation" viewBox="0 0 720 260" xmlns="http://www.w3.org/2000/svg" aria-label="Animated workflow construction with AI optimization">
+            <defs>
+              <marker id="arrowA" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+                <path d="M 0 0 L 10 5 L 0 10 z" fill="#0f1419" />
+              </marker>
+            </defs>
+
+            <!-- Arrows between blocks -->
+            <g stroke="#0f1419" stroke-width="1.5" fill="none">
+              <line class="wf-arrow a1" x1="138" y1="170" x2="172" y2="170" marker-end="url(#arrowA)" />
+              <line class="wf-arrow a2" x1="260" y1="170" x2="294" y2="170" marker-end="url(#arrowA)" />
+              <line class="wf-arrow a3" x1="382" y1="170" x2="416" y2="170" marker-end="url(#arrowA)" />
+              <line class="wf-arrow a4" x1="504" y1="170" x2="538" y2="170" marker-end="url(#arrowA)" />
+            </g>
+
+            <!-- 5 workflow blocks -->
+            <g class="wf-block b1">
+              <rect x="40" y="148" width="98" height="44" rx="4" fill="#faf8f2" stroke="#0f1419" stroke-width="1.2" />
+              <text x="89" y="174" text-anchor="middle" font-family="Inter" font-size="12" fill="#0f1419" font-weight="500">Intake</text>
+            </g>
+            <g class="wf-block b2 glow">
+              <rect x="162" y="148" width="98" height="44" rx="4" fill="#faf8f2" stroke="#0f1419" stroke-width="1.2" />
+              <text x="211" y="174" text-anchor="middle" font-family="Inter" font-size="12" fill="#0f1419" font-weight="500">Triage</text>
+            </g>
+            <g class="wf-block b3 glow">
+              <rect x="284" y="148" width="98" height="44" rx="4" fill="#faf8f2" stroke="#0f1419" stroke-width="1.2" />
+              <text x="333" y="174" text-anchor="middle" font-family="Inter" font-size="12" fill="#0f1419" font-weight="500">Review</text>
+            </g>
+            <g class="wf-block b4 glow">
+              <rect x="406" y="148" width="98" height="44" rx="4" fill="#faf8f2" stroke="#0f1419" stroke-width="1.2" />
+              <text x="455" y="174" text-anchor="middle" font-family="Inter" font-size="12" fill="#0f1419" font-weight="500">Approve</text>
+            </g>
+            <g class="wf-block b5">
+              <rect x="528" y="148" width="98" height="44" rx="4" fill="#faf8f2" stroke="#0f1419" stroke-width="1.2" />
+              <text x="577" y="174" text-anchor="middle" font-family="Inter" font-size="12" fill="#0f1419" font-weight="500">Archive</text>
+            </g>
+
+            <!-- AI module (drops in from above) -->
+            <g class="wf-ai">
+              <rect x="243" y="56" width="180" height="44" rx="4" fill="#0a6e6e" stroke="#054545" stroke-width="1.2" />
+              <circle cx="267" cy="78" r="5" fill="#faf8f2" opacity="0.95" />
+              <text x="345" y="82" text-anchor="middle" font-family="Inter" font-size="13" fill="#faf8f2" font-weight="500">AI Module</text>
+            </g>
+
+            <!-- Beams from AI to blocks 2, 3, 4 -->
+            <g stroke="#0a6e6e" stroke-width="1.5" stroke-dasharray="3 3" fill="none">
+              <line class="wf-beam m1" x1="288" y1="100" x2="211" y2="148" />
+              <line class="wf-beam m2" x1="333" y1="100" x2="333" y2="148" />
+              <line class="wf-beam m3" x1="378" y1="100" x2="455" y2="148" />
+            </g>
+          </svg>
+          <div class="workflow-stage__caption">
+            Map the workflow. Clarify the system. Let AI earn its place.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROBLEM / COMPARE SECTION -->
+    <section class="section section--paper">
+      <div class="container">
+        <div class="section__head">
+          <span class="eyebrow">Why AI efforts stall</span>
+          <h2>Most teams add AI on top of <em>broken delivery systems</em>. The result is faster documentation of the same problems.</h2>
+        </div>
+
+        <div class="compare">
+          <article class="compare__panel">
+            <div class="compare__num">01</div>
+            <h3>AI layered on top of broken workflows</h3>
+            <p>Without workflow clarity, AI amplifies inconsistency and rework.</p>
+          </article>
+          <article class="compare__panel">
+            <div class="compare__num">02</div>
+            <h3>Decision latency and unclear ownership</h3>
+            <p>If inputs and decision rights are not explicit, delivery slows. AI cannot fix that.</p>
+          </article>
+          <article class="compare__panel">
+            <div class="compare__num">03</div>
+            <h3>PMs drowning in status while delivery slips</h3>
+            <p>Tooling helps document the drift. Systems thinking prevents it.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- WIM STORY BLOCK -->
+    <section class="section">
+      <div class="container">
+        <div class="story">
+          <div>
+            <span class="eyebrow">Workflow Intelligence Map</span>
+            <h2>Our purpose-built tool gives your team a <em>structured, AI-powered path</em> from workflow chaos to measurable improvement.</h2>
+            <p class="story__lede">
+              WIM combines three proven methodologies — workflow mapping, SIPOC, and AI capability classification — into a single guided experience.
+            </p>
+            <blockquote class="story__pullquote">
+              Every session ends with a ranked pilot plan tied to real constraints — not a list of possibilities.
+              <cite>— The WIM promise</cite>
+            </blockquote>
+          </div>
+          <figure class="story__image">
+            <img src="./assets/wim-01.png" alt="Workflow Intelligence Map overview" />
+            <figcaption class="story__caption">
+              <span>Fig. 01 — WIM overview</span>
+              <span>Prioritized pilot output</span>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="option-flag">Mockup — Option A · Premium Craft</div>
+</body>
+</html>

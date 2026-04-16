@@ -1,0 +1,754 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Option C — Systems Blueprint | AI Powered Projects</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  />
+  <style>
+    /* ============== Option C — Systems Blueprint ============== */
+    :root {
+      --paper: #f7f3eb;            /* warm paper white */
+      --paper-2: #efe9dc;          /* darker paper for panels */
+      --paper-grid: rgba(28, 28, 30, 0.06);
+      --ink: #1c1c1e;              /* graphite */
+      --ink-soft: rgba(28, 28, 30, 0.72);
+      --ink-faint: rgba(28, 28, 30, 0.55);
+      --ink-ghost: rgba(28, 28, 30, 0.28);
+      --rule: rgba(28, 28, 30, 0.22);
+      --rule-thin: rgba(28, 28, 30, 0.14);
+      --blueprint: #1e4e8c;         /* blueprint blue */
+      --blueprint-soft: rgba(30, 78, 140, 0.12);
+      --blueprint-deep: #143966;
+      --ochre: #b8832e;             /* secondary annotation */
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    html, body { margin: 0; padding: 0; }
+
+    body {
+      background: var(--paper);
+      background-image:
+        linear-gradient(var(--paper-grid) 1px, transparent 1px),
+        linear-gradient(90deg, var(--paper-grid) 1px, transparent 1px);
+      background-size: 32px 32px;
+      color: var(--ink);
+      font-family: "Inter", "Segoe UI", system-ui, sans-serif;
+      font-size: 16px;
+      line-height: 1.55;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+
+    .container {
+      width: min(1256px, calc(100% - 64px));
+      margin: 0 auto;
+    }
+
+    /* ============== Header ============== */
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 40;
+      background: rgba(247, 243, 235, 0.94);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--rule);
+    }
+    .header__inner {
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      gap: 32px;
+      align-items: center;
+      min-height: 76px;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .brand__logo {
+      width: 44px;
+      height: 44px;
+      border-radius: 2px;
+      box-shadow: 0 0 0 1px var(--rule);
+    }
+    .brand__title {
+      font-family: "Inter", sans-serif;
+      font-size: 1.05rem;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+      line-height: 1.1;
+    }
+    .brand__kicker {
+      font-family: "JetBrains Mono", monospace;
+      font-size: 0.68rem;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--blueprint);
+    }
+    .nav {
+      display: flex;
+      gap: 32px;
+      justify-content: center;
+      font-family: "JetBrains Mono", monospace;
+      font-size: 0.84rem;
+      font-weight: 500;
+      color: var(--ink-soft);
+    }
+    .nav a { transition: color 0.18s ease; position: relative; }
+    .nav a:hover { color: var(--blueprint); }
+    .header__cta {
+      font-family: "Inter", sans-serif;
+      font-size: 0.88rem;
+      font-weight: 500;
+      color: var(--paper);
+      background: var(--blueprint);
+      padding: 12px 22px;
+      border-radius: 2px;
+      border: 1px solid var(--blueprint);
+      transition: background 0.18s ease;
+    }
+    .header__cta:hover { background: var(--blueprint-deep); border-color: var(--blueprint-deep); }
+
+    /* ============== Hero ============== */
+    .hero {
+      padding: 88px 0 72px;
+      position: relative;
+    }
+    .hero__inner {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(440px, 0.92fr);
+      gap: 56px;
+      align-items: start;
+    }
+
+    /* Drawing-sheet border */
+    .drawing-rule {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-family: "JetBrains Mono", monospace;
+      font-size: 0.72rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--ink-faint);
+      padding: 0 0 14px;
+      border-bottom: 1px solid var(--rule);
+      margin-bottom: 28px;
+    }
+    .drawing-rule span:first-child { color: var(--blueprint); font-weight: 600; }
+
+    .eyebrow {
+      font-family: "JetBrains Mono", monospace;
+      font-size: 0.78rem;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--blueprint);
+      margin-bottom: 18px;
+      display: block;
+    }
+
+    .hero h1 {
+      font-family: "Inter", sans-serif;
+      font-size: clamp(2.6rem, 5.5vw, 4.5rem);
+      font-weight: 500;
+      line-height: 1.08;
+      letter-spacing: -0.035em;
+      margin: 0;
+      color: var(--ink);
+      max-width: 16ch;
+    }
+    .hero h1 strong {
+      color: var(--blueprint);
+      font-weight: 500;
+      background: linear-gradient(transparent 70%, var(--blueprint-soft) 70%);
+      padding: 0 2px;
+    }
+
+    .hero__lede {
+      margin: 28px 0 0;
+      max-width: 52ch;
+      font-size: 1.1rem;
+      line-height: 1.55;
+      color: var(--ink-soft);
+    }
+
+    .hero__specsheet {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 6px 18px;
+      margin: 28px 0 0;
+      padding: 18px 0 0;
+      border-top: 1px solid var(--rule);
+      font-family: "JetBrains Mono", monospace;
+      font-size: 0.78rem;
+    }
+    .hero__specsheet dt { color: var(--ink-faint); text-transform: uppercase; letter-spacing: 0.06em; }
+    .hero__specsheet dd { margin: 0; color: var(--ink); font-weight: 500; }
+
+    .actions {
+      display: flex;
+      gap: 12px;
+      margin: 32px 0 0;
+      flex-wrap: wrap;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 13px 24px;
+      border-radius: 2px;
+      font-family: "Inter", sans-serif;
+      font-size: 0.9rem;
+      font-weight: 500;
+      border: 1px solid transparent;
+      cursor: pointer;
+      transition: all 0.18s ease;
+    }
+    .btn--primary {
+      background: var(--ink);
+      color: var(--paper);
+      border-color: var(--ink);
+    }
+    .btn--primary:hover { background: var(--blueprint); border-color: var(--blueprint); }
+    .btn--secondary {
+      background: transparent;
+      color: var(--ink);
+      border-color: var(--rule);
+    }
+    .btn--secondary:hover {
+      border-color: var(--blueprint);
+      color: var(--blueprint);
+    }
+
+    /* ============== Workflow stage (blueprint sheet styling) ============== */
+    .workflow-stage {
+      position: relative;
+      background: var(--paper);
+      border: 1px solid var(--rule);
+      padding: 30px 28px 20px;
+      box-shadow: 0 18px 50px rgba(28,28,30,0.08);
+    }
+    /* Corner tick marks - architectural drawing style */
+    .workflow-stage::before,
+    .workflow-stage::after {
+      content: "";
+      position: absolute;
+      width: 14px;
+      height: 14px;
+      border: 1.5px solid var(--blueprint);
+    }
+    .workflow-stage::before {
+      top: -1px; left: -1px;
+      border-right: none;
+      border-bottom: none;
+    }
+    .workflow-stage::after {
+      bottom: -1px; right: -1px;
+      border-left: none;
+      border-top: none;
+    }
+    .workflow-stage__header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      font-family: "JetBrains Mono", monospace;
+      font-size: 0.72rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--ink-faint);
+      margin-bottom: 20px;
+      padding-bottom: 12px;
+      border-bottom: 1px dashed var(--rule-thin);
+    }
+    .workflow-stage__header strong { color: var(--blueprint); font-weight: 600; }
+    .workflow-stage__footer {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 16px;
+      padding-top: 14px;
+      border-top: 1px dashed var(--rule-thin);
+      font-family: "JetBrains Mono", monospace;
+      font-size: 0.72rem;
+      letter-spacing: 0.06em;
+      color: var(--ink-faint);
+      text-transform: uppercase;
+    }
+
+    .workflow-animation { width: 100%; height: auto; display: block; }
+
+    /* Animation keyframes - 10s cycle */
+    .wf-block { opacity: 0; }
+    .wf-arrow { opacity: 0; stroke-dashoffset: 30; }
+    .wf-ai    { opacity: 0; transform: translateY(-20px); }
+    .wf-beam  { opacity: 0; }
+    .wf-dim   { opacity: 0; }
+
+    @keyframes blockFade {
+      0%, 2%    { opacity: 0; transform: translateY(6px); }
+      6%, 85%   { opacity: 1; transform: translateY(0); }
+      95%, 100% { opacity: 0; }
+    }
+    @keyframes arrowDraw {
+      0%, 5%    { opacity: 0; stroke-dashoffset: 30; }
+      9%, 85%   { opacity: 1; stroke-dashoffset: 0; }
+      95%, 100% { opacity: 0; }
+    }
+    @keyframes dimLineFade {
+      0%, 40%   { opacity: 0; }
+      50%, 85%  { opacity: 0.5; }
+      95%, 100% { opacity: 0; }
+    }
+    @keyframes aiDrop {
+      0%, 40%   { opacity: 0; transform: translateY(-16px); }
+      48%, 85%  { opacity: 1; transform: translateY(0); }
+      95%, 100% { opacity: 0; }
+    }
+    @keyframes beamPulse {
+      0%, 48%   { opacity: 0; stroke-dashoffset: 20; }
+      52%       { opacity: 1; stroke-dashoffset: 0; }
+      60%       { opacity: 0.35; }
+      68%       { opacity: 1; }
+      76%       { opacity: 0.35; }
+      85%       { opacity: 1; }
+      95%, 100% { opacity: 0; }
+    }
+    @keyframes blockMark {
+      0%, 48%   { stroke: #1c1c1e; stroke-width: 1.2; }
+      60%, 85%  { stroke: #1e4e8c; stroke-width: 1.6; }
+      95%, 100% { stroke: #1c1c1e; stroke-width: 1.2; }
+    }
+
+    .wf-block.b1 { animation: blockFade 10s ease infinite; animation-delay: 0s; }
+    .wf-block.b2 { animation: blockFade 10s ease infinite; animation-delay: 0.6s; }
+    .wf-block.b3 { animation: blockFade 10s ease infinite; animation-delay: 1.2s; }
+    .wf-block.b4 { animation: blockFade 10s ease infinite; animation-delay: 1.8s; }
+    .wf-block.b5 { animation: blockFade 10s ease infinite; animation-delay: 2.4s; }
+    .wf-arrow.a1 { animation: arrowDraw 10s ease infinite; animation-delay: 0.3s; }
+    .wf-arrow.a2 { animation: arrowDraw 10s ease infinite; animation-delay: 0.9s; }
+    .wf-arrow.a3 { animation: arrowDraw 10s ease infinite; animation-delay: 1.5s; }
+    .wf-arrow.a4 { animation: arrowDraw 10s ease infinite; animation-delay: 2.1s; }
+    .wf-dim      { animation: dimLineFade 10s ease infinite; }
+    .wf-ai       { animation: aiDrop 10s ease infinite; animation-delay: 0s; }
+    .wf-beam.m1  { animation: beamPulse 10s ease infinite; }
+    .wf-beam.m2  { animation: beamPulse 10s ease infinite; animation-delay: 0.1s; }
+    .wf-beam.m3  { animation: beamPulse 10s ease infinite; animation-delay: 0.2s; }
+    .wf-block.mark.b2 rect { animation: blockMark 10s ease infinite; animation-delay: 0.6s; }
+    .wf-block.mark.b3 rect { animation: blockMark 10s ease infinite; animation-delay: 1.2s; }
+    .wf-block.mark.b4 rect { animation: blockMark 10s ease infinite; animation-delay: 1.8s; }
+
+    /* ============== Sections ============== */
+    .section { padding: 96px 0; position: relative; }
+    .section--panel { background: var(--paper-2); border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
+
+    .section__head {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 56px;
+      margin-bottom: 56px;
+      align-items: start;
+    }
+    .section__index {
+      font-family: "JetBrains Mono", monospace;
+      font-size: 0.8rem;
+      letter-spacing: 0.08em;
+      color: var(--blueprint);
+      text-transform: uppercase;
+      padding-top: 8px;
+      min-width: 120px;
+    }
+    .section__index strong {
+      display: block;
+      font-size: 1.8rem;
+      font-weight: 400;
+      letter-spacing: -0.01em;
+      color: var(--ink);
+      margin-top: 2px;
+      font-family: "Inter", sans-serif;
+    }
+    .section__head h2 {
+      font-family: "Inter", sans-serif;
+      font-weight: 500;
+      font-size: clamp(1.9rem, 3.8vw, 2.8rem);
+      line-height: 1.15;
+      letter-spacing: -0.025em;
+      margin: 0;
+      color: var(--ink);
+    }
+    .section__head h2 strong {
+      color: var(--blueprint);
+      font-weight: 500;
+      background: linear-gradient(transparent 70%, var(--blueprint-soft) 70%);
+      padding: 0 2px;
+    }
+
+    /* Compare section */
+    .compare {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 0;
+      border-top: 1px solid var(--rule);
+    }
+    .compare__panel {
+      padding: 32px 28px 32px 0;
+      border-right: 1px solid var(--rule);
+      position: relative;
+    }
+    .compare__panel:last-child { border-right: none; }
+    .compare__panel:not(:first-child) { padding-left: 28px; }
+    .compare__meta {
+      font-family: "JetBrains Mono", monospace;
+      font-size: 0.74rem;
+      letter-spacing: 0.08em;
+      color: var(--blueprint);
+      text-transform: uppercase;
+      margin-bottom: 14px;
+    }
+    .compare__panel h3 {
+      font-family: "Inter", sans-serif;
+      font-size: 1.2rem;
+      font-weight: 500;
+      line-height: 1.3;
+      letter-spacing: -0.015em;
+      margin: 0 0 10px;
+      color: var(--ink);
+    }
+    .compare__panel p {
+      margin: 0;
+      color: var(--ink-soft);
+      font-size: 0.95rem;
+      line-height: 1.55;
+    }
+
+    /* WIM story block */
+    .story {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr);
+      gap: 64px;
+      align-items: center;
+    }
+    .story h2 {
+      font-family: "Inter", sans-serif;
+      font-weight: 500;
+      font-size: clamp(1.9rem, 3.6vw, 2.6rem);
+      line-height: 1.15;
+      letter-spacing: -0.025em;
+      margin: 14px 0 0;
+    }
+    .story h2 strong {
+      color: var(--blueprint);
+      font-weight: 500;
+      background: linear-gradient(transparent 70%, var(--blueprint-soft) 70%);
+      padding: 0 2px;
+    }
+    .story__lede {
+      margin: 24px 0 0;
+      font-size: 1.08rem;
+      line-height: 1.55;
+      color: var(--ink-soft);
+    }
+    .story__specs {
+      margin: 28px 0 0;
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 6px 18px;
+      padding: 18px 0 0;
+      border-top: 1px solid var(--rule);
+      font-family: "JetBrains Mono", monospace;
+      font-size: 0.78rem;
+    }
+    .story__specs dt { color: var(--ink-faint); text-transform: uppercase; letter-spacing: 0.06em; }
+    .story__specs dd { margin: 0; color: var(--ink); font-weight: 500; }
+
+    /* Image frame with dimension marks */
+    .story__drawing {
+      position: relative;
+      padding: 24px;
+      background: var(--paper);
+      border: 1px solid var(--rule);
+    }
+    .story__drawing::before,
+    .story__drawing::after {
+      content: "";
+      position: absolute;
+      width: 14px;
+      height: 14px;
+      border: 1.5px solid var(--blueprint);
+    }
+    .story__drawing::before {
+      top: -1px; left: -1px;
+      border-right: none; border-bottom: none;
+    }
+    .story__drawing::after {
+      bottom: -1px; right: -1px;
+      border-left: none; border-top: none;
+    }
+    .story__drawing img {
+      width: 100%;
+      border: 1px solid var(--rule-thin);
+    }
+    .story__drawing-footer {
+      display: flex;
+      justify-content: space-between;
+      padding-top: 14px;
+      margin-top: 14px;
+      border-top: 1px dashed var(--rule-thin);
+      font-family: "JetBrains Mono", monospace;
+      font-size: 0.72rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--ink-faint);
+    }
+    .story__drawing-footer strong { color: var(--blueprint); font-weight: 600; }
+
+    /* Option label */
+    .option-flag {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      z-index: 100;
+      padding: 10px 18px;
+      border-radius: 2px;
+      background: var(--ink);
+      color: var(--paper);
+      font-family: "JetBrains Mono", monospace;
+      font-size: 0.78rem;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      box-shadow: 0 8px 24px rgba(28,28,30,0.2);
+    }
+
+    @media (max-width: 1024px) {
+      .hero__inner, .story, .section__head { grid-template-columns: 1fr; gap: 40px; }
+      .compare { grid-template-columns: 1fr; border-top: none; }
+      .compare__panel { border-right: none; border-bottom: 1px solid var(--rule); padding: 24px 0; }
+      .compare__panel:not(:first-child) { padding-left: 0; }
+      .nav { display: none; }
+      .section { padding: 64px 0; }
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="container header__inner">
+      <a class="brand" href="#">
+        <img class="brand__logo" src="./assets/logo.png" alt="" />
+        <div>
+          <div class="brand__kicker">AI.PM.CO — LEHI, UT</div>
+          <div class="brand__title">AI Powered Projects</div>
+        </div>
+      </a>
+      <nav class="nav">
+        <a href="#">Services</a>
+        <a href="#">Framework</a>
+        <a href="#">WIM</a>
+        <a href="#">Scorecard</a>
+        <a href="#">Contact</a>
+      </nav>
+      <a class="header__cta" href="#">Book a Fit Check</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container">
+        <div class="drawing-rule">
+          <span>SHEET 01 / HERO</span>
+          <span>REV. A · 2026-04-16</span>
+          <span>DRAWN BY: J. TAYLOR</span>
+        </div>
+
+        <div class="hero__inner">
+          <div class="hero__copy">
+            <span class="eyebrow">01.1 · Practical AI for smarter project delivery</span>
+            <h1>AI-enabled delivery starts with <strong>fixing the system</strong>, not buying another tool.</h1>
+            <p class="hero__lede">
+              We help teams deliver faster and smarter with practical, systems-first, tool-agnostic AI-enabled workflows that actually stick.
+            </p>
+            <dl class="hero__specsheet">
+              <dt>For</dt>
+              <dd>PMOs · Delivery leads · Project-driven teams</dd>
+              <dt>Lead</dt>
+              <dd>Jason Taylor, PMP · SSBB · PSM</dd>
+              <dt>Method</dt>
+              <dd>Systems-first · Tool-agnostic · Pilot-driven</dd>
+            </dl>
+            <div class="actions">
+              <a class="btn btn--primary" href="#">Book a Fit Check</a>
+              <a class="btn btn--secondary" href="#">See the 3-Day Workshop →</a>
+            </div>
+          </div>
+
+          <div class="workflow-stage">
+            <div class="workflow-stage__header">
+              <span><strong>WF-001</strong> · Baseline workflow</span>
+              <span>Scale 1:1</span>
+            </div>
+
+            <svg class="workflow-animation" viewBox="0 0 720 260" xmlns="http://www.w3.org/2000/svg" aria-label="Animated workflow with AI module">
+              <defs>
+                <marker id="arrowC" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+                  <path d="M 0 0 L 10 5 L 0 10 z" fill="#1c1c1e" />
+                </marker>
+                <marker id="arrowBlue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+                  <path d="M 0 0 L 10 5 L 0 10 z" fill="#1e4e8c" />
+                </marker>
+              </defs>
+
+              <!-- Drawing registration marks (corners of diagram area) -->
+              <g stroke="#1e4e8c" stroke-width="1" opacity="0.5">
+                <line x1="20" y1="40" x2="32" y2="40" />
+                <line x1="20" y1="40" x2="20" y2="52" />
+                <line x1="700" y1="40" x2="688" y2="40" />
+                <line x1="700" y1="40" x2="700" y2="52" />
+                <line x1="20" y1="230" x2="32" y2="230" />
+                <line x1="20" y1="230" x2="20" y2="218" />
+                <line x1="700" y1="230" x2="688" y2="230" />
+                <line x1="700" y1="230" x2="700" y2="218" />
+              </g>
+
+              <!-- Dimension line above flow (architectural drawing) -->
+              <g class="wf-dim" stroke="#1e4e8c" stroke-width="0.8">
+                <line x1="40" y1="132" x2="626" y2="132" stroke-dasharray="2 3" />
+                <line x1="40" y1="126" x2="40" y2="138" />
+                <line x1="626" y1="126" x2="626" y2="138" />
+                <text x="333" y="127" text-anchor="middle" font-family="JetBrains Mono" font-size="10" fill="#1e4e8c" font-weight="500">5 STEPS · 7.2d AVG CYCLE</text>
+              </g>
+
+              <!-- Connection arrows -->
+              <g stroke="#1c1c1e" stroke-width="1.5" fill="none">
+                <line class="wf-arrow a1" x1="138" y1="170" x2="172" y2="170" marker-end="url(#arrowC)" />
+                <line class="wf-arrow a2" x1="260" y1="170" x2="294" y2="170" marker-end="url(#arrowC)" />
+                <line class="wf-arrow a3" x1="382" y1="170" x2="416" y2="170" marker-end="url(#arrowC)" />
+                <line class="wf-arrow a4" x1="504" y1="170" x2="538" y2="170" marker-end="url(#arrowC)" />
+              </g>
+
+              <!-- 5 blocks -->
+              <g class="wf-block b1">
+                <rect x="40" y="148" width="98" height="44" fill="#f7f3eb" stroke="#1c1c1e" stroke-width="1.2" />
+                <text x="89" y="170" text-anchor="middle" font-family="Inter" font-size="11" fill="#1c1c1e" font-weight="500">Intake</text>
+                <text x="89" y="184" text-anchor="middle" font-family="JetBrains Mono" font-size="8" fill="#1e4e8c">S-01</text>
+              </g>
+              <g class="wf-block b2 mark">
+                <rect x="162" y="148" width="98" height="44" fill="#f7f3eb" stroke="#1c1c1e" stroke-width="1.2" />
+                <text x="211" y="170" text-anchor="middle" font-family="Inter" font-size="11" fill="#1c1c1e" font-weight="500">Triage</text>
+                <text x="211" y="184" text-anchor="middle" font-family="JetBrains Mono" font-size="8" fill="#1e4e8c">S-02</text>
+              </g>
+              <g class="wf-block b3 mark">
+                <rect x="284" y="148" width="98" height="44" fill="#f7f3eb" stroke="#1c1c1e" stroke-width="1.2" />
+                <text x="333" y="170" text-anchor="middle" font-family="Inter" font-size="11" fill="#1c1c1e" font-weight="500">Review</text>
+                <text x="333" y="184" text-anchor="middle" font-family="JetBrains Mono" font-size="8" fill="#1e4e8c">S-03</text>
+              </g>
+              <g class="wf-block b4 mark">
+                <rect x="406" y="148" width="98" height="44" fill="#f7f3eb" stroke="#1c1c1e" stroke-width="1.2" />
+                <text x="455" y="170" text-anchor="middle" font-family="Inter" font-size="11" fill="#1c1c1e" font-weight="500">Approve</text>
+                <text x="455" y="184" text-anchor="middle" font-family="JetBrains Mono" font-size="8" fill="#1e4e8c">S-04</text>
+              </g>
+              <g class="wf-block b5">
+                <rect x="528" y="148" width="98" height="44" fill="#f7f3eb" stroke="#1c1c1e" stroke-width="1.2" />
+                <text x="577" y="170" text-anchor="middle" font-family="Inter" font-size="11" fill="#1c1c1e" font-weight="500">Archive</text>
+                <text x="577" y="184" text-anchor="middle" font-family="JetBrains Mono" font-size="8" fill="#1e4e8c">S-05</text>
+              </g>
+
+              <!-- AI module -->
+              <g class="wf-ai">
+                <rect x="243" y="56" width="180" height="48" fill="#1e4e8c" stroke="#143966" stroke-width="1.2" />
+                <circle cx="267" cy="80" r="5" fill="#f7f3eb" />
+                <circle cx="267" cy="80" r="2" fill="#1e4e8c" />
+                <text x="345" y="78" text-anchor="middle" font-family="Inter" font-size="12" fill="#f7f3eb" font-weight="500">AI Module</text>
+                <text x="345" y="94" text-anchor="middle" font-family="JetBrains Mono" font-size="8" fill="#f7f3eb" opacity="0.8">M-01 · CLASSIFY+ROUTE</text>
+              </g>
+
+              <!-- Beams from AI to middle blocks -->
+              <g stroke="#1e4e8c" stroke-width="1.5" stroke-dasharray="3 3" fill="none">
+                <line class="wf-beam m1" x1="288" y1="104" x2="211" y2="148" />
+                <line class="wf-beam m2" x1="333" y1="104" x2="333" y2="148" />
+                <line class="wf-beam m3" x1="378" y1="104" x2="455" y2="148" />
+              </g>
+            </svg>
+
+            <div class="workflow-stage__footer">
+              <span>FIG. 01.1 — AI-AUGMENTED FLOW</span>
+              <span>LOOP · 10s</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROBLEM / COMPARE SECTION -->
+    <section class="section section--panel">
+      <div class="container">
+        <div class="section__head">
+          <div class="section__index">
+            02 · PROBLEM<strong>Why AI stalls</strong>
+          </div>
+          <h2>Most teams add AI on top of <strong>broken delivery systems</strong>. The result is faster documentation of the same problems.</h2>
+        </div>
+
+        <div class="compare">
+          <article class="compare__panel">
+            <div class="compare__meta">02.1 · Failure mode</div>
+            <h3>AI layered on top of broken workflows</h3>
+            <p>Without workflow clarity, AI amplifies inconsistency and rework.</p>
+          </article>
+          <article class="compare__panel">
+            <div class="compare__meta">02.2 · Failure mode</div>
+            <h3>Decision latency and unclear ownership</h3>
+            <p>If inputs and decision rights are not explicit, delivery slows. AI cannot fix that.</p>
+          </article>
+          <article class="compare__panel">
+            <div class="compare__meta">02.3 · Failure mode</div>
+            <h3>PMs drowning in status while delivery slips</h3>
+            <p>Tooling helps document the drift. Systems thinking prevents it.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- WIM STORY BLOCK -->
+    <section class="section">
+      <div class="container">
+        <div class="story">
+          <div>
+            <span class="eyebrow">03.1 · Workflow Intelligence Map</span>
+            <h2>A purpose-built tool giving your team a <strong>structured path</strong> from workflow chaos to measurable improvement.</h2>
+            <p class="story__lede">
+              WIM combines three proven methodologies — workflow mapping, SIPOC, and AI capability classification — into one guided experience.
+            </p>
+            <dl class="story__specs">
+              <dt>Methods</dt>
+              <dd>Mapping · SIPOC · AI classification</dd>
+              <dt>Output</dt>
+              <dd>Ranked pilot plan with success metrics</dd>
+              <dt>Format</dt>
+              <dd>Guided session, 5 steps</dd>
+            </dl>
+          </div>
+          <figure class="story__drawing">
+            <img src="./assets/wim-01.png" alt="Workflow Intelligence Map overview" />
+            <figcaption class="story__drawing-footer">
+              <span><strong>FIG. 03.1</strong> · WIM OVERVIEW</span>
+              <span>SHEET 03 / 05</span>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="option-flag">Mockup — Option C · Systems Blueprint</div>
+</body>
+</html>
