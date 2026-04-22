@@ -381,6 +381,25 @@ button { font: inherit; cursor: pointer; }
 .wf-block.mark.b3 rect { animation: blockMark 10s ease infinite; animation-delay: 1.2s; }
 .wf-block.mark.b4 rect { animation: blockMark 10s ease infinite; animation-delay: 1.8s; }
 
+/* ---------- Hero animation (iframe-embedded sprite loop) ---------- */
+.hero-anim {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: var(--paper);
+  border: 1px solid var(--rule);
+  box-shadow: var(--shadow-sheet);
+  overflow: hidden;
+}
+.hero-anim__frame {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .wf-block, .wf-arrow, .wf-ai, .wf-beam, .wf-dim { animation: none !important; opacity: 1 !important; }
   .wf-ai { transform: none !important; }
